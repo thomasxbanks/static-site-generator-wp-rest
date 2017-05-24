@@ -44,7 +44,7 @@ const makePostFile = (post) => {
 			padding: 0;
 			margin: 0;
 			font-family: "News Cycle", Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 18px;
+			font-size: 20px;
 		}
 
 		main {
@@ -113,7 +113,7 @@ const makePostFile = (post) => {
 			text-shadow: 0 0 8px #000;
 		}
 		main {
-			max-width: 960px;
+			max-width: 640px;
 			margin-right: auto;
 			margin-left: auto;
 		}
@@ -221,8 +221,15 @@ const postsJson = (data) => {
 const getAPI = (endpoint) => {
 	axios.get(endpoint).then((response) => {
 		console.log("*************************************************\n", response.data)
-		postsJson(response.data)
+		// Save the original, un-sanitised, data to a json file
+		// postsJson(response.data)
+		response.data.forEach((post)=>{
+			fse.mkdirsSync('./src/images/single-post-images/' + post.slug)
+		})
+
+		// Format the response
 		sanitiseAllPosts(response.data)
+
 	}).catch((error) => {
 		console.error(error)
 	})
@@ -234,6 +241,7 @@ const sanitiseAllPosts = (data) => {
 		posts.push(satintisePostData(datum))
 		if (posts.length === data.length) {
 			// console.log(posts)
+			// Save the new, sanitised, data to a json file
 			postsJson(posts)
 			posts.forEach((post) => {
 				makePostFile(post)
@@ -319,8 +327,7 @@ const replacePostContentImages = (content) => {
 		m.forEach((match, groupIndex) => {
 			let filename = m[1].split('/')[7]
 			// console.log(filename)
-			return filename
-			//return content.replace(m[1], '/images/single-post-images/' + datum.slug + '/' + filename)
+			return content.replace(m[1], '/images/single-post-images/' + datum.slug + '/' + filename)
 		})
 	}
 }

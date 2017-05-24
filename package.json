@@ -1,0 +1,20 @@
+{
+  "name": "node-wp-writer",
+  "version": "0.1.0",
+  "description": "Building static pages using the WordPress API",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever index.js",
+    "sitemap": "cd src && tree -l 9 -o ./sitemap.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "thomasxbanks",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "forever": "^0.15.3",
+    "fs-extra": "^3.0.1",
+    "request": "^2.81.0"
+  }
+}

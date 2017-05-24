@@ -1,0 +1,149 @@
+
+	<!DOCTYPE html>
+	<html lang="en" class="is-ie">
+
+	<head>
+	<meta charset="UTF-8">
+	<title>Page Hero</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: "News Cycle", Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 18px;
+		}
+
+		main {
+			max-width: 1024px;
+			margin: 0 auto;
+			padding: 1em;
+		}
+
+		.page_hero {
+			width: 100%;
+			height: 100vh;
+			max-height: 650px;
+			text-align: center;
+			overflow: hidden;
+			position: relative;
+			display: table;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		.page_hero .inner {
+			display: table-row;
+		}
+
+		.is-ie .page_hero [class^="hero_img-full"] {
+			display: none;
+		}
+
+		.page_hero [class^="hero_img-"] {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.page_hero .hero_img-thumb {
+			z-index: 9;
+		}
+
+		.page_hero .hero_img-full {
+			z-index: 8;
+		}
+
+		.texture {
+			background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0))
+			width: 100%;
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			z-index: 10;
+		}
+
+		.texture h1,
+		.texture p {
+			max-width: 560px;
+			margin: 1em auto;
+			padding: 0 1em;
+			color: #fff;
+			text-shadow: 0 0 8px #000;
+		}
+		main {
+			max-width: 960px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		main img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+	</head>
+
+	<body>
+	<section class="page_hero" style="background-image: url(/images/single-post-images/silent-grouping-better-than-kevin-spacey/House-of-Cards.jpg);">
+		<img class="hero_img-thumb" src="/images/single-post-images/silent-grouping-better-than-kevin-spacey/thumb-House-of-Cards.jpg" alt="">
+		<img class="hero_img-full" src="/images/single-post-images/silent-grouping-better-than-kevin-spacey/House-of-Cards.jpg" alt="">
+		<div class="inner">
+			<div class="texture">
+				<h1>Silent Grouping: Better than Kevin Spacey</h1>
+				<p>By Nyamawoo</p>
+			</div>
+		</div>
+	</section>
+	<main>
+		<div class='intro'><p>Everyone understands the importance of being able to predict the future. And as software teams, we’re asked to do this a <b>lot</b><i>.</i> Like it or not, there’s any number of stakeholders working with, or affected by, your project, and one of the things they’re going to be particularly concerned about is the delivery date. It’s an inevitable part of the software development process. Sometimes, they’re the people paying for it. Sometimes, they’re the people marketing it. Sometimes, whether you get paid or not depends on it.</div>
+<p><div id="attachment_300" style="width: 610px" class="wp-caption aligncenter"><a href="http://www.scrummable.com/wp-content/uploads/2015/08/17fy5m0mqye05jpg1.jpg"><img class="size-medium wp-image-300" src="http://www.scrummable.com/wp-content/uploads/2015/08/17fy5m0mqye05jpg1-600x338.jpg" alt="A sterling example of the benefits of predicting the future." width="600" height="338" /></a><p class="wp-caption-text">A sterling example of the benefits of predicting the future.</p></div></p>
+<p>Unfortunately, in this world of agile and scrum and kanban and waterfall and kanbanterfall and all of the other wonderful software project methodologies, you’re going to run into the tension between the certainty of a delivery date, and the certainty that you don’t know enough to make that call. And, not getting into the whole ‘estimation is a myth’ debate (that’s for another article), for the sake of argument today I’m going to acknowledge that there are a number of ways to predict the future, and that some of them may be more accurate than others.</p>
+<p>Story pointing is a pretty long-held method of predicting the perceived effort involved in the delivery of a feature, and is often the tool used to extrapolate those estimates into a delivery date, on the basis of historical trends in your team. The idea is that we start with the smallest estimate for the smallest feature we can think of, and then everything else is estimated in relation to this: so, changing the colour of a button may be a ‘2’ (2 means nothing), whereas changing the size and position of that button may be anywhere from a ‘3’ to a ‘100’ (again, the number means nothing) depending on complexity. If we don’t have enough information to assign a perceived ‘effort’ against a ticket, or if the estimation we have arrived at is too big, we go back to the drawing board, breaking the feature down further where we can, and gathering enough information in order to be able to decide on how much effort we think the ticket might take.</p>
+<p>The idea is that the numbers you assign inherit meaning as your workflow becomes established within the team: after a prolonged period of time, you team can get so accurate at this (and so familiar with their own process and ways of working) that ‘2’ can subsequently translate to 3 days from development to completion of a feature for example. There’s a lot of negatives to this, and lots of teams make the mistake (and it is <b><i>very</i></b><b> easy </b>to do so) of directly equating points to time <em>way</em> to early in the process &#8211; but if you can do it right, it can become a reliable method for working out how long things might take to build.</p>
+<p>Arguably the most prevalent method for doing this is planning poker. Planning poker involves a deck of cards, each marked up with a ‘points’ estimate on a scale (estimation traditionally runs off the Fibonacci scale, so the order goes 1,2,3,5,8,13,20(sometimes),30,100 and so on). Each member of the team (and this exercise should involve everyone from the project, so all disciplines) gets a set of cards containing each number.</p>
+<p><div id="attachment_298" style="width: 473px" class="wp-caption aligncenter"><a href="http://www.scrummable.com/wp-content/uploads/2015/08/Nautilus038.jpg"><img class="size-full wp-image-298" src="http://www.scrummable.com/wp-content/uploads/2015/08/Nautilus038.jpg" alt="The Fibonacci Scale. The loveable snail of software development." width="463" height="299" srcset="http://www.scrummable.com/wp-content/uploads/2015/08/Nautilus038.jpg 463w, http://www.scrummable.com/wp-content/uploads/2015/08/Nautilus038-16x10.jpg 16w" sizes="(max-width: 463px) 100vw, 463px" /></a><p class="wp-caption-text">The Fibonacci Scale. The loveable snail of software development.</p></div></p>
+<p>The tickets for estimation are taken in turn, and the feature or problem we’re trying to solve is presented to the team. Once the feature has been explained, and any kinks or edge cases deemed important are nailed down in terms of approach, everybody plays the card they think reflects the effort it would take to complete the feature. If the numbers played don’t match, further discussion happens, and further hands are played until an agreement on estimated effort is reached. Points as mentioned are arbitrary, but any points assignation should be done based on previous experience. If you have none, it’s guess-work; and it should be widely known by all stakeholders that even if we’re guessing to begin with, this isn’t wasted effort &#8211; it’s a vital part of establishing a benchmark against which you’ll work in the future.</p>
+<p>This exercise is incredibly useful, in that it allows people of all levels of experience to outline what they think the challenges inherent to a ticket will be &#8211; and it means that an estimate isn’t arrived at based on one team members’ experience, because we want to remove as many dependencies from the process as possible; what if the team member who estimated the ticket isn’t available to do the work, and someone else has to pick it up for example?</p>
+<p>However, planning poker requires discipline; often these meetings can last several hours and can quite easily diverge into technical implementation discussions, wider product ambition discussions and so on, and the longer they last the less likely your estimates are to accurately reflect the work as attention wains. Estimation sessions, if not tightly controlled, can often become seen as a bit of a chore and a waste of time &#8211; and the more people involved (which by rights there should be to ensure a balanced set of views are represented), the more expensive they become.</p>
+<p>So, how can we make this process just as accurate, but shorter and less time-consuming for everyone involved? Another approach to try (that in my experience works particularly well) is called ‘Silent Grouping.’</p>
+<p>Silent grouping (i’m not going to lie) looks a bit weird. The basic idea is that all of the tickets you want to estimate are stuck to a great big whiteboard in an unprioritised column. Next to this are a further series of columns, split by your estimation flavour of choice &#8211; this could be time, points, t-shirt sizing, kittens, whatever you use. Each ticket should have the story detail associated with it to enough of a level that everybody should be able to understand the task at hand.</p>
+<p><div id="attachment_302" style="width: 492px" class="wp-caption aligncenter"><a href="http://www.scrummable.com/wp-content/uploads/2015/08/kittens.jpg"><img class="size-full wp-image-302" src="http://www.scrummable.com/wp-content/uploads/2015/08/kittens.jpg" alt="These kittens mean nothing. They are a metaphorical representation of perceived effort. Deep." width="482" height="327" srcset="http://www.scrummable.com/wp-content/uploads/2015/08/kittens.jpg 482w, http://www.scrummable.com/wp-content/uploads/2015/08/kittens-16x11.jpg 16w" sizes="(max-width: 482px) 100vw, 482px" /></a><p class="wp-caption-text">These kittens mean nothing. They are a metaphorical representation of perceived effort. Deep.</p></div></p>
+<p>At the beginning of the session, the tickets are outlined by the BA/PM and any obvious questions or edge cases/considerations are nailed down to ensure everybody understands the work required for each of the tickets. Once this briefing is complete, the entire team lines up in front of the board. From this point forward it is <b>absolutely essential</b> that no-one speaks. No discussion should be had between now and when the exercise is completed.</p>
+<p>One by one, each team member picks up a ticket (in any order from the batch of tickets) and places it in the column that they think most accurately represents the work involved in the task. The person taking their turn can also elect to move a ticket that has already been assigned an estimate if they feel the estimate already given doesn’t reflect the work involved. This process is continued in multiple cycles until all tickets are assigned to a column on the board, and tickets are no longer being swapped from column to column.</p>
+<p><div id="attachment_297" style="width: 510px" class="wp-caption aligncenter"><a href="http://www.scrummable.com/wp-content/uploads/2015/08/tumblr_ml4r2etFcA1rok2afo1_500.gif"><img class="size-full wp-image-297" src="http://www.scrummable.com/wp-content/uploads/2015/08/tumblr_ml4r2etFcA1rok2afo1_500.gif" alt="Although dancing, all of the people in this image are silent. Silently grouping. Always grouping." width="500" height="272" /></a><p class="wp-caption-text">Although dancing, all of the people in this image are silent. Silently grouping. Always grouping.</p></div></p>
+<p>The beauty with the process of silent grouping is that removing the discussion element from the process has a threefold impact:</p>
+<ol>
+<li><b>It’s fairer. </b>Teams are made up of a wide range of personalities, and it can become easy during a traditional planning poker session for the loudest personality to dominate the discussions. Silent grouping removes this element, allowing each person to silently contribute their opinion, affording equal weight to everyone.</li>
+<li><b>It improves accuracy. </b>Removing the discussion element allows people to focus on the tasks for estimation personally. Any feature we build involves a multitude of complex processes, and during a traditional estimation session it would be impossible to cover all of these in detail as a group &#8211; there’s just too much to consider. Silent grouping allows each member of the team to consider each ticket individually and from their own perspective, and as such it usually results in a more well-rounded consideration of both the task at hand and any potential pitfalls that may arise</li>
+<li><b>It can save time. </b>Surprisingly enough, and probably as a direct consequence of point (2), silent grouping disagreements over the weight of a ticket often sort themselves out in a couple of cycles. The fact that each person can consider tickets individually and without input from other team members means that each person can come to their own conclusions about the reason behind a disagreement, and challenge themselves to determine why someone else may consider a ticket bigger or smaller than they would. This can neutralise any lengthy debate process that can often arise in a traditional planning poker session, making the process much quicker.</li>
+</ol>
+<p>Although the process sounds like it may be a lengthy one, it’s been consistently suggested that once silent grouping is embedded as a process within a team, it can reduce the time taken to estimate stories significantly to a fraction of what it takes to complete a traditional planning poker session, whilst simultaneously improving accuracy. The fact that the process is accelerated also means that an estimation session can become something the team actively looks forward to, rather than becoming a source of dread.</p>
+<p>So, silent grouping &#8211; remember, if you’re going to have to predict the future, it’s best to do it <i>quietly</i>.</p>
+
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.hero_img-full').one("load", function() {
+				$('.hero_img-thumb').animate({
+					'opacity': 0
+				}, 500)
+			}).each(function() {
+				if (this.complete) $(this).load()
+			})
+		})
+	</script>
+	</body>
+
+	</html>
+	

@@ -1,0 +1,131 @@
+
+	<!DOCTYPE html>
+	<html lang="en" class="is-ie">
+
+	<head>
+	<meta charset="UTF-8">
+	<title>Page Hero</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: "News Cycle", Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 18px;
+		}
+
+		main {
+			max-width: 1024px;
+			margin: 0 auto;
+			padding: 1em;
+		}
+
+		.page_hero {
+			width: 100%;
+			height: 100vh;
+			max-height: 650px;
+			text-align: center;
+			overflow: hidden;
+			position: relative;
+			display: table;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		.page_hero .inner {
+			display: table-row;
+		}
+
+		.is-ie .page_hero [class^="hero_img-full"] {
+			display: none;
+		}
+
+		.page_hero [class^="hero_img-"] {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.page_hero .hero_img-thumb {
+			z-index: 9;
+		}
+
+		.page_hero .hero_img-full {
+			z-index: 8;
+		}
+
+		.texture {
+			background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0))
+			width: 100%;
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			z-index: 10;
+		}
+
+		.texture h1,
+		.texture p {
+			max-width: 560px;
+			margin: 1em auto;
+			padding: 0 1em;
+			color: #fff;
+			text-shadow: 0 0 8px #000;
+		}
+		main {
+			max-width: 960px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		main img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+	</head>
+
+	<body>
+	<section class="page_hero" style="background-image: url(/images/single-post-images/the-build-triangle-understanding-limitations/Abstract-Triangle-Background-HD-wallpapers.jpg);">
+		<img class="hero_img-thumb" src="/images/single-post-images/the-build-triangle-understanding-limitations/thumb-Abstract-Triangle-Background-HD-wallpapers.jpg" alt="">
+		<img class="hero_img-full" src="/images/single-post-images/the-build-triangle-understanding-limitations/Abstract-Triangle-Background-HD-wallpapers.jpg" alt="">
+		<div class="inner">
+			<div class="texture">
+				<h1>The Build Triangle: Understanding Limitations</h1>
+				<p>By Pigeon Thom</p>
+			</div>
+		</div>
+	</section>
+	<main>
+		<div class='intro'><p>In an ideal world, everything we build would be perfect &#8211; gorgeous code, on time, and under budget but most of us don’t live in a Disney utopia. Unfortunately, the real world chips away at our resolve and something has to give. Part of good stakeholder management is managing expectations and part of managing expectations is acknowledging limitations.</div>
+<p><img class="aligncenter size-medium wp-image-408" src="http://www.scrummable.com/wp-content/uploads/2016/02/build_triangle-600x600.png" alt="build_triangle" width="600" height="600" /><br />
+This is the Build Triangle, a device applicable to almost any form of production. The basic premise that anything that can be produced can be produced well, quickly, or cheaply &#8211; but never all three. This holds true for websites, buildings, shoes, food&#8230;anything!</p>
+<p>The trick is to work out which of the three you can do most without: Do you have a tight deadline and a small budget? Then, sorry, but you’re not going to get all of the bells and whistles! Do you have thousands of pounds going spare and are happy with it going live whenever? In that case, we can give you an all-singing, all-dancing extravaganza! Does it have to be live tomorrow and definitely ground-breaking cutting-edge perfection? Sure, but it’ll cost you!</p>
+<p>Educating clients will manage their expectations, and allow you to effectively manage the delivery of the product with as few headaches as possible.</p>
+<p>Where you can make tackle the issue is by iterating. Start with something good and fast, then work towards making it great. This will draw the cost out over a protracted period but ultimately leave you with the best of all worlds! This doesn&#8217;t mean you&#8217;re giving the client something rubbish to begin with but, through education, guiding a client down this route will be beneficial all round. The client starts to fulfil their KPIs sooner, the cost is spread over a longer period, the development will improve with each iteration based on real-life feedback.</p>
+
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.hero_img-full').one("load", function() {
+				$('.hero_img-thumb').animate({
+					'opacity': 0
+				}, 500)
+			}).each(function() {
+				if (this.complete) $(this).load()
+			})
+		})
+	</script>
+	</body>
+
+	</html>
+	

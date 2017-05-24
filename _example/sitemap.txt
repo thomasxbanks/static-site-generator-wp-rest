@@ -1,0 +1,40 @@
+/Users/thom/projects/_sandbox/node-wp-writer/src
+├── images
+|  ├── page-images
+|  |  ├── careers-archive-image
+|  |  └── contact-page-image
+|  ├── posts-images
+|  └── ui-images
+├── index.html
+├── pages
+|  ├── author-archive.html
+|  ├── careers-archive.html
+|  ├── casestudies-archive.html
+|  ├── category-archive.html
+|  ├── contact-page.html
+|  ├── posts-archive.html
+|  ├── privacypolicy-page.html
+|  ├── single-author
+|  |  ├── richard.html
+|  |  ├── steve.html
+|  |  └── thomas.html
+|  ├── single-careers
+|  |  ├── digitalmarketingmanager.html
+|  |  ├── marketingmanager.html
+|  |  └── webdeveloper.html
+|  ├── single-casestudy
+|  |  ├── ans.html
+|  |  ├── avecto.html
+|  |  └── revolution.html
+|  ├── single-category
+|  |  ├── advertising.html
+|  |  ├── branding.html
+|  |  ├── creative.html
+|  |  ├── marketing.html
+|  |  ├── seo.html
+|  |  └── webdesign.html
+|  ├── single-post
+|  └── termsandconditions-page.html
+└── style.css
+
+directory: 12 file: 25 

@@ -10,7 +10,6 @@ const fse = require('fs-extra')
 const requestHandler = (request, response) => {
 	// console.log(request, response)
 
-	getAPI('http://scrummable.com/wp-json/wp/v2/posts?_embed')
 
 	response.end('check your console.log')
 }
@@ -22,138 +21,55 @@ server.listen(port, (err) => {
 		return console.log('something bad happened', err)
 	}
 
-	getAPI('http://scrummable.com/wp-json/wp/v2/posts?_embed')
+	getAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
 
 	console.log(`server is listening on ${port}`)
 })
 
 const makePostFile = (post) => {
 	var fileName = './src/pages/single-post/' + post.slug + ".html"
-	let contentEdit = replacePostContentImages(post)
+
 	const template = `
-	<!DOCTYPE html>
-	<html lang="en" class="is-ie">
+		<!DOCTYPE html>
+		<html lang="en">
 
-	<head>
-	<meta charset="UTF-8">
-	<title>Page Hero</title>
-	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
-	<link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
-	<style>
-		body {
-			padding: 0;
-			margin: 0;
-			font-family: "News Cycle", Arial, "Helvetica Neue", Helvetica, sans-serif;
-			font-size: 20px;
-		}
+		<head>
+		<meta charset="UTF-8">
+		<title>Page Hero</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+		</head>
 
-		main {
-			max-width: 1024px;
-			margin: 0 auto;
-			padding: 1em;
-		}
-
-		.page_hero {
-			width: 100%;
-			height: 100vh;
-			max-height: 650px;
-			text-align: center;
-			overflow: hidden;
-			position: relative;
-			display: table;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-		}
-
-		.page_hero .inner {
-			display: table-row;
-		}
-
-		.is-ie .page_hero [class^="hero_img-full"] {
-			display: none;
-		}
-
-		.page_hero [class^="hero_img-"] {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-		}
-
-		.page_hero .hero_img-thumb {
-			z-index: 9;
-		}
-
-		.page_hero .hero_img-full {
-			z-index: 8;
-		}
-
-		.texture {
-			background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0))
-			width: 100%;
-			height: 100%;
-			display: table-cell;
-			vertical-align: middle;
-			position: relative;
-			z-index: 10;
-		}
-
-		.texture h1,
-		.texture p {
-			max-width: 560px;
-			margin: 1em auto;
-			padding: 0 1em;
-			color: #fff;
-			text-shadow: 0 0 8px #000;
-		}
-		main {
-			max-width: 640px;
-			margin-right: auto;
-			margin-left: auto;
-		}
-		main img {
-			display: block;
-			max-width: 100%;
-			height: auto;
-		}
-	</style>
-	</head>
-
-	<body>
-	<section class="page_hero" style="background-image: url(${post.hero.full.staticpath});">
-		<img class="hero_img-thumb" src="${post.hero.thumb.staticpath}" alt="${post.hero.alt}">
-		<img class="hero_img-full" src="${post.hero.full.staticpath}" alt="${post.hero.alt}">
-		<div class="inner">
-			<div class="texture">
+		<body>
+		<section class="page_hero">
+			<img class="hero_img-thumb" src="/images/single-post-images/${post.slug}/${post.hero.thumb.filename}" />
+			<img class="hero_img-full" src="/images/single-post-images/${post.slug}/${post.hero.full.filename}" />
+			<div class="inner">
+				<div class="texture">
 				<h1>${post.title}</h1>
 				<p>By ${post.author.name}</p>
+				</div>
 			</div>
-		</div>
-	</section>
-	<main>
-		${post.content}
-	</main>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('.hero_img-full').one("load", function() {
-				$('.hero_img-thumb').animate({
-					'opacity': 0
-				}, 500)
-			}).each(function() {
-				if (this.complete) $(this).load()
+		</section>
+		<main>
+			${post.content}
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.hero_img-full').one("load", function() {
+					$('.hero_img-thumb').animate({
+						'opacity': 0
+					}, 500)
+				}).each(function() {
+					if (this.complete) $(this).load()
+				})
 			})
-		})
-	</script>
-	</body>
+		</script>
+		</body>
 
-	</html>
+		</html>
 	`
 
 
@@ -162,41 +78,35 @@ const makePostFile = (post) => {
 		flag: 'w'
 	}, function(err) {
 		if (err) throw err
-		console.log("Saved:", post.slug + ".html")
+		// console.log("Saved:", post.slug + ".html")
 	})
 
-	fse.mkdirsSync('./src/images/single-post-images/' + post.slug)
 
-	let imagePath = './src/images/single-post-images/' + post.slug + "/"
 
-	download(post.hero.thumb.source, imagePath + post.hero.thumb.filename, function() {
-		console.log('done', post.hero.thumb.filename)
-	})
 
-	download(post.hero.full.source, imagePath + post.hero.full.filename, function() {
-		console.log('done', post.hero.full.filename)
-	})
-
-	const regex = /src="(.*?)"/g;
-
+	// download all of the images in the post
+	//const regex = /src="(.*?)"/g;
+	const regex = /src=\\"(.*?)\\"/g;
 	let m;
 
 	while ((m = regex.exec(post.content)) !== null) {
 		// This is necessary to avoid infinite loops with zero-width matches
 		if (m.index === regex.lastIndex) {
-			regex.lastIndex++;
+			regex.lastIndex++
 		}
 
 		// The result can be accessed through the `m`-variable.
 		m.forEach((match, groupIndex) => {
-			console.log(`Found match, group ${groupIndex}: ${match}`);
+			// console.log(`Found match, group ${groupIndex}: ${match}`)
 			var imgFileName = m[1].split('/')[7]
 
 			download(m[1], './src/images/single-post-images/' + post.slug + "/" + imgFileName, function() {
 				console.log('done', imgFileName)
 			})
-		});
+		})
 	}
+
+	// END download all of the images in the post
 
 }
 
@@ -220,11 +130,47 @@ const postsJson = (data) => {
 
 const getAPI = (endpoint) => {
 	axios.get(endpoint).then((response) => {
-		console.log("*************************************************\n", response.data)
+		// 	console.log("*************************************************\n", response.data)
+
 		// Save the original, un-sanitised, data to a json file
 		// postsJson(response.data)
-		response.data.forEach((post)=>{
+
+		response.data.forEach((post) => {
+
+			//console.log("*************************************************\n", post)
+
+			// make all the folders for the images
 			fse.mkdirsSync('./src/images/single-post-images/' + post.slug)
+
+			// crawl all the hero images
+			let imagePath = './src/images/single-post-images/' + post.slug + "/"
+
+			download(post['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.source_url, imagePath + post['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file, function() {
+				//console.log('done', post['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file)
+			})
+
+			// crawl all the thumbnail images
+			download(post['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.source_url, imagePath + post['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file, function() {
+				//console.log('done', post['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file)
+			})
+
+			// crawl all the content images
+			var pattern = new RegExp('src=\\"(.*?)\\"', 'g')
+			var urls = post.content.rendered.match(pattern)
+
+			if (urls) {
+				urls.forEach((url) => {
+					var url = url.split('"')
+					var filename = url[1].split('/')
+					if (filename[2] !== 'www.youtube.com') {
+						var filename = filename[(filename.length - 1)]
+						download(url[1], './src/images/single-post-images/' + post.slug + "/" + filename, function() {
+							console.log('done', url[1])
+						})
+					}
+				})
+			}
+
 		})
 
 		// Format the response
@@ -239,14 +185,18 @@ const sanitiseAllPosts = (data) => {
 	let posts = []
 	data.forEach((datum) => {
 		posts.push(satintisePostData(datum))
+
 		if (posts.length === data.length) {
 			// console.log(posts)
-			// Save the new, sanitised, data to a json file
-			postsJson(posts)
 			posts.forEach((post) => {
 				makePostFile(post)
 			})
+
 		}
+
+		// Save the new, sanitised, data to a json file
+		postsJson(posts)
+
 	})
 }
 
@@ -256,7 +206,6 @@ const satintisePostData = (datum) => {
 		id: datum.id,
 		title: datum.title.rendered,
 		slug: datum.slug,
-		isFeatured: datum.sticky,
 		date: {
 			posted: datum.date,
 			modified: datum.modified
@@ -268,66 +217,56 @@ const satintisePostData = (datum) => {
 			avatar: datum['_embedded'].author[0].avatar_urls[96]
 		},
 		excerpt: datum.excerpt.rendered,
-		content: datum.content.rendered,
+		content: '',
 		hero: {
-			alt: datum.better_featured_image.alt_text,
-			caption: datum.better_featured_image.caption,
+			alt: (datum['_embedded']['wp:featuredmedia'][0].alt_text) ? datum['_embedded']['wp:featuredmedia'][0].alt_text : datum.title.rendered,
+			caption: (datum['_embedded']['wp:featuredmedia'][0].caption) ? datum['_embedded']['wp:featuredmedia'][0].caption.rendered : datum.title.rendered,
 			full: {
-				source: datum.better_featured_image.source_url,
-				filename: datum.better_featured_image.media_details.file.split('/')[2],
-				staticpath: "/images/single-post-images/" + datum.slug + "/" + datum.better_featured_image.media_details.file.split('/')[2]
+				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file
 			},
 			thumb: {
-				source: datum.better_featured_image.media_details.sizes.medium.source_url,
-				filename: "thumb-" + datum.better_featured_image.media_details.file.split('/')[2],
-				staticpath: "/images/single-post-images/" + datum.slug + "/thumb-" + datum.better_featured_image.media_details.file.split('/')[2]
+				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file
 			}
-		}
+		},
+		categories: []
 	}
 
-	return post
-}
+	function replaceImagePaths(content) {
+		var pattern = new RegExp('src=\\"(.*?)\\"', 'g')
+		var url = content.match(pattern)
 
-const replaceImages = (data) => {
-	let contents = []
-	const regex = /src="(.*?)"/g;
-	let m;
-	data.forEach((datum)=>{
-		//console.log(datum.content.rendered)
+		if (url) {
+			var grabUrl = url[0].split('"')
 
-		while ((m = regex.exec(datum.content.rendered)) !== null) {
-			// This is necessary to avoid infinite loops with zero-width matches
-			if (m.index === regex.lastIndex) {
-				regex.lastIndex++;
+			var url = grabUrl[1].split('/')
+
+			let end = (url.length - 1)
+
+			if (url[2] !== 'www.youtube.com') {
+				var pattern = new RegExp(url.slice(0, end).join('\\/'), 'g')
+				var filename = url[end]
+
+				return content.replace(pattern, '/images/single-post-images/' + datum.slug)
+			} else {
+				return content
 			}
+		} else {
+			return content
+		}
 
-			m.forEach((match, groupIndex) => {
-				let filename = m[1].split('/')[7]
-				// console.log(filename)
-				contents.push(datum.content.rendered.replace(m[1], '/images/single-post-images/' + datum.slug + '/' + filename))
-			})
-		}
-		if (contents.length === data.length){
-			console.log(contents)
-		}
+	}
+
+	post.content = replaceImagePaths(datum.content.rendered)
+
+	// Generate the category list
+	datum['_embedded']['wp:term'][0].forEach((category, i) => {
+		post.categories.push({
+			id: datum['_embedded']['wp:term'][0][i].id,
+			name: datum['_embedded']['wp:term'][0][i].name,
+			slug: datum['_embedded']['wp:term'][0][i].slug,
+		})
 	})
 
-}
-
-
-const replacePostContentImages = (content) => {
-	const regex = /src="(.*?)"/g;
-	let m;
-	while ((m = regex.exec(content)) !== null) {
-		// This is necessary to avoid infinite loops with zero-width matches
-		if (m.index === regex.lastIndex) {
-			regex.lastIndex++;
-		}
-
-		m.forEach((match, groupIndex) => {
-			let filename = m[1].split('/')[7]
-			// console.log(filename)
-			return content.replace(m[1], '/images/single-post-images/' + datum.slug + '/' + filename)
-		})
-	}
+	// return the, er, post. duh
+	return post
 }

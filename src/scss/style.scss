@@ -1,0 +1,66 @@
+/*
+    DEBUGGING REDLINE
+*/
+html.redline * {
+	    box-shadow: inset -1px -1px 0 rgba(255,0,0,0.3), inset 1px 1px 0 rgba(255,0,0,0.3);
+}
+
+#grid-ruler-extension * {
+	box-shadow: none !important;
+}
+/*
+  BASE
+*/
+@import "base/functions"; // Scss functions that I use a lot
+@import "base/mixins"; // Scss Mixins that I use a lot
+@import "base/animations"; // Useful Animations
+@import "base/variables"; // Define the site variables
+@import "base/normal"; // Level the playing field
+/*
+  TYPOGRAPHY
+*/
+@import "typography/base"; // Define the basic typeface styles for use throughout the site
+@import "typography/typography"; // Elaborate on the basic typefaces for use in specific areas
+@import "typography/links"; // Styling for <a> tags
+/*
+  ELEMENTS
+*/
+@import "elements/buttons"; // Button styles
+@import "elements/forms"; // Form styles
+
+@import "elements/hero"; // Giant hero image in "that" style
+
+
+/*********************/
+/*      EXAMPLES     */
+/*********************/
+$small: 400px;
+$large: 1000px;
+
+html {
+	/* The base (smallest) value. */
+	font-size: $font_size-med;
+	/* In $small it should be 20px and in $large it should be 100px,  */
+	/* In viewports between that its padding should be calculated */
+	@media (min-width: $small) {
+		font-size: between($font_size-med, $font_size-std, $small, $large);
+	}
+	/* In $large we cap the value at 100px */
+	@media (min-width: $large) {
+		font-size: $font_size-std;
+	}
+}
+
+.dynamic-padding {
+	/* The base (smallest) value. */
+	padding: 20px;
+	/* In $small it should be 20px and in $large it should be 100px,  */
+	/* In viewports between that its padding should be calculated */
+	@media (min-width: $small) {
+		padding: between(20px, 100px, $small, $large);
+	}
+	/* In $large we cap the value at 100px */
+	@media (min-width: $large) {
+		padding: 100px;
+	}
+}

@@ -1,0 +1,49 @@
+// Styling for form elements
+
+form {
+    label {}
+
+    input,
+    select,
+    textarea {
+        -webkit-appearance: none;
+
+        &:focus {}
+
+        &:required {}
+
+        &:disabled {}
+    }
+
+    input {
+        &[type="text"] {}
+
+        &[type="email"] {}
+
+        &[type="tel"] {}
+
+        &[type="date"] {}
+
+        &[type="password"] {}
+
+        &[type="url"] {}
+
+        &[type="submit"] {
+            @extend button;
+        }
+
+        &[type="reset"] {
+            @extend button;
+        }
+
+        &[type="button"] {
+            @extend button;
+        }
+    }
+
+    select {
+        option {}
+    }
+
+    textarea {}
+}

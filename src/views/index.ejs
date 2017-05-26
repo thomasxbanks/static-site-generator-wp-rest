@@ -30,6 +30,15 @@
 			}).each(function() {
 				if (this.complete) $(this).load()
 			})
+
+			document.querySelectorAll('button').forEach((button)=>{
+				button.addEventListener('click', ()=>{
+					let nav = document.querySelector('#masthead')
+					let state = (nav.getAttribute('data-state') === 'is-active') ? 'not-active' : 'is-active'
+					nav.setAttribute('data-state', state)
+				})
+			})
+
 		})
 	</script>
 </body>

@@ -8,8 +8,26 @@
 	color: $clr_white;
 	font-size: $font_size-sml;
 	padding: 2rem;
+
 	h1 {
 		margin: 0;
+	}
+
+	button {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 205;
+		margin: 1rem 2rem;
+		font-size: $font_size-xlg;
+		background: none;
+		border: none;
+		color: $clr_white;
+		cursor: pointer;
+
+		&:hover {
+			color: $clr_brand;
+		}
 	}
 }
 
@@ -24,27 +42,40 @@ nav {
 	transition: opacity $ease-main $speed-fast;
 	width: calc(100% - 2rem);
 	margin: 1rem;
+
 	ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
+
 		li {
 			display: block;
 		}
 	}
+
 	a {
 		display: block;
 		font-size: 1rem;
 		color: $clr_black;
 		text-decoration: none;
 		padding: 0.5rem;
+
 		&:hover {
 			color: $clr_brand;
 		}
 	}
 }
 
-#masthead:hover nav {
-	left: 0;
-	opacity: 1;
+#masthead[data-state="is-active"] {
+	nav {
+		left: 0;
+		opacity: 1;
+	}
+	button {
+		color: $clr_brand;
+
+		&:hover {
+			color: $clr_black;
+		}
+	}
 }

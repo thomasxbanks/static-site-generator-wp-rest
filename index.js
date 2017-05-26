@@ -9,8 +9,6 @@ const fse = require('fs-extra')
 
 const requestHandler = (request, response) => {
 	// console.log(request, response)
-
-
 	response.end('check your console.log')
 }
 

@@ -53,6 +53,7 @@ const makePostFile = (post) => {
 			</div>
 		</section>
 		<main>
+			<h5>${post.categories[0].name}</h5>
 			${post.content}
 		</main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -138,6 +139,9 @@ const getAPI = (endpoint) => {
 		response.data.forEach((post) => {
 
 			//console.log("*************************************************\n", post)
+
+			// Make the pages directory
+			fse.mkdirsSync('./src/pages/single-post/')
 
 			// make all the folders for the images
 			fse.mkdirsSync('./src/images/single-post-images/' + post.slug)

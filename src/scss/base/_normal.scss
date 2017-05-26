@@ -19,6 +19,10 @@ html {
 	}
 }
 
+html[data-state="is-active"] {
+	overflow: hidden;
+}
+
 main {
 	max-width: 640px;
 	margin-right: auto;

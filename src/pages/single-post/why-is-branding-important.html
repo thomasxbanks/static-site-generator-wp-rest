@@ -101,8 +101,10 @@
 			document.querySelectorAll('button').forEach((button)=>{
 				button.addEventListener('click', ()=>{
 					let nav = document.querySelector('#masthead')
+					let html = document.querySelector('html')
 					let state = (nav.getAttribute('data-state') === 'is-active') ? 'not-active' : 'is-active'
 					nav.setAttribute('data-state', state)
+					html.setAttribute('data-state', state)
 				})
 			})
 

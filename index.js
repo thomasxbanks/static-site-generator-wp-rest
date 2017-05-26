@@ -11,6 +11,10 @@ const ejs = require('ejs')
 const template = fs.readFileSync('./src/views/index.ejs', 'utf8')
 const navigation = []
 
+const envProd = true
+
+const baseUrl = (envProd) ? '/static-site-generator-wp-rest' : process.cwd()
+
 const requestHandler = (request, response) => {
 	// console.log(request, response)
 	response.end('check your console.log')
@@ -22,8 +26,6 @@ server.listen(port, (err) => {
 	if (err) {
 		return console.log('something bad happened', err)
 	}
-
-	console.log(process.cwd())
 
 	getPostsAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
 
@@ -85,7 +87,7 @@ const makePostFile = (post) => {
 	let content = ejs.render(template, {
 		filename: './src/views/index.ejs',
 		templateName: 'single',
-		stylesheet: process.cwd() + '/public/css/style.css',
+		stylesheet: baseUrl + '/public/css/style.css',
 		post: post,
 		links: navigation
 	})
@@ -252,11 +254,11 @@ const satintisePostData = (datum) => {
 			caption: (datum['_embedded']['wp:featuredmedia'][0].caption) ? datum['_embedded']['wp:featuredmedia'][0].caption.rendered : datum.title.rendered,
 			full: {
 				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file,
-				location: process.cwd() + '/public/images/single-post-images/' + datum.slug + '/' + datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file
+				location: baseUrl + '/public/images/single-post-images/' + datum.slug + '/' + datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file
 			},
 			thumb: {
 				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file,
-				location: process.cwd() + '/public/images/single-post-images/' + datum.slug + '/' + datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file
+				location: baseUrl + '/public/images/single-post-images/' + datum.slug + '/' + datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file
 			}
 		},
 		categories: []
@@ -277,7 +279,7 @@ const satintisePostData = (datum) => {
 				var pattern = new RegExp(url.slice(0, end).join('\\/'), 'g')
 				var filename = url[end]
 
-				return content.replace(pattern, process.cwd() + '/public/images/single-post-images/' + datum.slug)
+				return content.replace(pattern, baseUrl + '/public/images/single-post-images/' + datum.slug)
 			} else {
 				return content
 			}
@@ -307,7 +309,7 @@ const generateNavigation = (data) => {
 	data.forEach((datum) => {
 		let link = {
 			text: datum.title.rendered,
-			url: process.cwd() + '/public/pages/single-post/' + datum.slug + '.html'
+			url: baseUrl + '/public/pages/single-post/' + datum.slug + '.html'
 		}
 		navigation.push(link)
 		if (navigation.length === data.length) {
@@ -322,7 +324,7 @@ const makeHomePage = (navigation) => {
 	let content = ejs.render(template, {
 		filename: './src/views/index.ejs',
 		templateName: 'home',
-		stylesheet: process.cwd() + '/public/css/style.css',
+		stylesheet: baseUrl + '/public/css/style.css',
 		links: navigation
 	})
 

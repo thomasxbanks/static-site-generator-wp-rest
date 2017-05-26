@@ -3,9 +3,12 @@ const http = require('http')
 const port = 1337
 
 const axios = require('axios')
-const fs = require('fs')
+const fs = require('fs-extra')
 const rq = require('request')
-const fse = require('fs-extra')
+const ejs = require('ejs')
+
+const template = fs.readFileSync('./src/views/index.ejs', 'utf8')
+const navigation = []
 
 const requestHandler = (request, response) => {
 	// console.log(request, response)
@@ -21,61 +24,70 @@ server.listen(port, (err) => {
 
 	getPostsAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
 
+
 	//getAPI('http://wearecube3.com/wp-json/')
 
 	console.log(`server is listening on ${port}`)
 })
 
 const makePostFile = (post) => {
+
+
+	// const template = `
+	// 	<!DOCTYPE html>
+	// 	<html lang="en">
+	//
+	// 	<head>
+	// 	<meta charset="UTF-8">
+	// 	<title>Page Hero</title>
+	// 	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	// 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	// 	<link href="/static-site-generator-wp-rest/css/style.css" rel="stylesheet">
+	// 	</head>
+	//
+	// 	<body>
+	// 	<section class="page_hero">
+	// 		<img class="hero_img-thumb" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.thumb.filename}" />
+	// 		<img class="hero_img-full" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.full.filename}" />
+	// 		<div class="inner">
+	// 			<div class="texture">
+	// 			<h1>${post.title}</h1>
+	// 			<p>By ${post.author.name}</p>
+	// 			</div>
+	// 		</div>
+	// 	</section>
+	// 	<main>
+	// 		<h5>${post.categories[0].name}</h5>
+	// 		${post.content}
+	// 	</main>
+	// 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	// 	<script>
+	// 		$(document).ready(function() {
+	// 			$('.hero_img-full').one("load", function() {
+	// 				$('.hero_img-thumb').animate({
+	// 					'opacity': 0
+	// 				}, 500)
+	// 			}).each(function() {
+	// 				if (this.complete) $(this).load()
+	// 			})
+	// 		})
+	// 	</script>
+	// 	</body>
+	//
+	// 	</html>
+	// `
+
 	var fileName = './src/pages/single-post/' + post.slug + ".html"
 
-	const template = `
-		<!DOCTYPE html>
-		<html lang="en">
+	let content = ejs.render(template, {
+		filename: './src/views/index.ejs',
+		templateName: 'single',
+		stylesheet: __dirname + '/public/css/style.css',
+		post: post,
+		links: navigation
+	})
 
-		<head>
-		<meta charset="UTF-8">
-		<title>Page Hero</title>
-		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-		<link href="/static-site-generator-wp-rest/css/style.css" rel="stylesheet">
-		</head>
-
-		<body>
-		<section class="page_hero">
-			<img class="hero_img-thumb" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.thumb.filename}" />
-			<img class="hero_img-full" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.full.filename}" />
-			<div class="inner">
-				<div class="texture">
-				<h1>${post.title}</h1>
-				<p>By ${post.author.name}</p>
-				</div>
-			</div>
-		</section>
-		<main>
-			<h5>${post.categories[0].name}</h5>
-			${post.content}
-		</main>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.hero_img-full').one("load", function() {
-					$('.hero_img-thumb').animate({
-						'opacity': 0
-					}, 500)
-				}).each(function() {
-					if (this.complete) $(this).load()
-				})
-			})
-		</script>
-		</body>
-
-		</html>
-	`
-
-
-
-	fs.writeFile(fileName, template, {
+	fs.writeFile(fileName, content, {
 		flag: 'w'
 	}, function(err) {
 		if (err) throw err
@@ -130,9 +142,9 @@ const postsJson = (data) => {
 }
 
 const getAPI = (endpoint) => {
-	axios.get(endpoint).then((response)=>{
+	axios.get(endpoint).then((response) => {
 		postsJson(response.data)
-	}).catch((error)=>{
+	}).catch((error) => {
 		console.log(error)
 	})
 }
@@ -140,19 +152,21 @@ const getAPI = (endpoint) => {
 const getPostsAPI = (endpoint) => {
 	axios.get(endpoint).then((response) => {
 		// 	console.log("*************************************************\n", response.data)
-
+		generateNavigation(response.data)
 		// Save the original, un-sanitised, data to a json file
 		// postsJson(response.data)
+
+		// Make the pages directory
+		fs.mkdirsSync('./src/pages/single-post/')
 
 		response.data.forEach((post) => {
 
 			//console.log("*************************************************\n", post)
 
-			// Make the pages directory
-			fse.mkdirsSync('./src/pages/single-post/')
+
 
 			// make all the folders for the images
-			fse.mkdirsSync('./src/images/single-post-images/' + post.slug)
+			fs.mkdirsSync('./src/images/single-post-images/' + post.slug)
 
 			// crawl all the hero images
 			let imagePath = './src/images/single-post-images/' + post.slug + "/"
@@ -186,7 +200,7 @@ const getPostsAPI = (endpoint) => {
 		})
 
 		// Format the response
-		sanitiseAllPosts(response.data)
+		// sanitiseAllPosts(response.data)
 
 	}).catch((error) => {
 		console.error(error)
@@ -234,10 +248,12 @@ const satintisePostData = (datum) => {
 			alt: (datum['_embedded']['wp:featuredmedia'][0].alt_text) ? datum['_embedded']['wp:featuredmedia'][0].alt_text : datum.title.rendered,
 			caption: (datum['_embedded']['wp:featuredmedia'][0].caption) ? datum['_embedded']['wp:featuredmedia'][0].caption.rendered : datum.title.rendered,
 			full: {
-				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file
+				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file,
+				location: __dirname + '/public/images/single-post-images/' + datum.slug + '/' + datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.full.file
 			},
 			thumb: {
-				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file
+				filename: datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file,
+				location: __dirname + '/public/images/single-post-images/' + datum.slug + '/' + datum['_embedded']['wp:featuredmedia'][0].media_details.sizes.medium.file
 			}
 		},
 		categories: []
@@ -258,7 +274,7 @@ const satintisePostData = (datum) => {
 				var pattern = new RegExp(url.slice(0, end).join('\\/'), 'g')
 				var filename = url[end]
 
-				return content.replace(pattern, '/static-site-generator-wp-rest/images/single-post-images/' + datum.slug)
+				return content.replace(pattern, __dirname + '/public/images/single-post-images/' + datum.slug)
 			} else {
 				return content
 			}
@@ -281,4 +297,36 @@ const satintisePostData = (datum) => {
 
 	// return the, er, post. duh
 	return post
+}
+
+const generateNavigation = (data) => {
+
+	data.forEach((datum) => {
+		let link = {
+			text: datum.title.rendered,
+			url: __dirname + '/public/pages/single-post/' + datum.slug + '.html'
+		}
+		navigation.push(link)
+		if (navigation.length === data.length) {
+			// console.log(navigation)
+			makeHomePage(navigation)
+			sanitiseAllPosts(data)
+		}
+	})
+}
+
+const makeHomePage = (navigation) => {
+	let content = ejs.render(template, {
+		filename: './src/views/index.ejs',
+		templateName: 'home',
+		stylesheet: __dirname + '/public/css/style.css',
+		links: navigation
+	})
+
+	fs.writeFile('./src/index.html', content, {
+		flag: 'w'
+	}, function(err) {
+		if (err) throw err
+		// console.log("Saved:", post.slug + ".html")
+	})
 }

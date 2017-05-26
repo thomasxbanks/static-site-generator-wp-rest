@@ -1,0 +1,22 @@
+<section class="page_hero">
+	<img class="hero_img-thumb" src="<%- post.hero.thumb.location %>" />
+	<img class="hero_img-full" src="<%- post.hero.full.location %>" />
+	<div class="inner">
+		<div class="texture">
+			<h1><%- post.title %></h1>
+			<p>By
+				<%- post.author.name %>
+			</p>
+		</div>
+	</div>
+</section>
+<main>
+	<article>
+		<header>
+			<h5><%- post.categories[0].name %></h5>
+		</header>
+		<div class="content">
+			<%- post.content %>
+		</div>
+	</article>
+</main>

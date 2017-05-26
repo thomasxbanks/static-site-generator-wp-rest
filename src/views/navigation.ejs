@@ -1,5 +1,13 @@
 <nav>
 	<ul>
+		<% for (link of links){ %>
+			<li><a href="<%- link.url %>"><%- link.text %></a></li>
+		<% } %>
+	</ul>
+</nav>
+
+<nav style="display: none;">
+	<ul>
 		<li><a href="/static-site-generator-wp-rest/pages/single-post/3-2-1-brand-reactivate.html">3..2..1.. Brand Reactivate</a></li>
 		<li><a href="/static-site-generator-wp-rest/pages/single-post/9-very-honest-reviews-of-the-3-peaks-challenge.html">10 very honest reviews of The 3 Peaks Challenge</a></li>
 		<li><a href="/static-site-generator-wp-rest/pages/single-post/creativity-isnt-dead.html">Creativity isn&#8217;t dead&#8230;</a></li>

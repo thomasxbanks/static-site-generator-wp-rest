@@ -40,13 +40,13 @@ const makePostFile = (post) => {
 		<title>Page Hero</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-		<link href="/css/style.css" rel="stylesheet">
+		<link href="/static-site-generator-wp-rest/css/style.css" rel="stylesheet">
 		</head>
 
 		<body>
 		<section class="page_hero">
-			<img class="hero_img-thumb" src="/images/single-post-images/${post.slug}/${post.hero.thumb.filename}" />
-			<img class="hero_img-full" src="/images/single-post-images/${post.slug}/${post.hero.full.filename}" />
+			<img class="hero_img-thumb" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.thumb.filename}" />
+			<img class="hero_img-full" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.full.filename}" />
 			<div class="inner">
 				<div class="texture">
 				<h1>${post.title}</h1>
@@ -260,7 +260,7 @@ const satintisePostData = (datum) => {
 				var pattern = new RegExp(url.slice(0, end).join('\\/'), 'g')
 				var filename = url[end]
 
-				return content.replace(pattern, '/images/single-post-images/' + datum.slug)
+				return content.replace(pattern, '/static-site-generator-wp-rest/images/single-post-images/' + datum.slug)
 			} else {
 				return content
 			}

@@ -1,4 +1,9 @@
 #masthead {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 190;
 	background: $clr_black;
 	color: $clr_white;
 	font-size: $font_size-sml;
@@ -6,4 +11,40 @@
 	h1 {
 		margin: 0;
 	}
+}
+
+nav {
+	position: absolute;
+	left: -50000px;
+	top: 0;
+	z-index: 200;
+	opacity: 0;
+	background: rgba($clr_white, 0.9);
+	padding: 1rem;
+	transition: opacity $ease-main $speed-fast;
+	width: calc(100% - 2rem);
+	margin: 1rem;
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display: block;
+		}
+	}
+	a {
+		display: block;
+		font-size: 1rem;
+		color: $clr_black;
+		text-decoration: none;
+		padding: 0.5rem;
+		&:hover {
+			color: $clr_brand;
+		}
+	}
+}
+
+#masthead:hover nav {
+	left: 0;
+	opacity: 1;
 }

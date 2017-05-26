@@ -1,0 +1,5 @@
+<div class="cat-flag-wrapper">
+	<% for (cat of post.categories) { %>
+		<a class="cat-flag themed" data-theme="<%- cat.slug %>" href="<%- cat.slug %>"><%- cat.name %></a>
+	<% } %>
+</div>

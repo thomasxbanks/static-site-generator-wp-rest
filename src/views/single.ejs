@@ -3,18 +3,18 @@
 	<img class="hero_img-full" src="<%- post.hero.full.location %>" />
 	<div class="inner">
 		<div class="texture">
-			<h1><%- post.title %></h1>
-			<p>By
-				<%- post.author.name %>
-			</p>
+			<div class="central-column">
+				<%- include cat-flag %>
+				<h1><%- post.title %></h1>
+			</div>
 		</div>
 	</div>
 </section>
 <main>
-	<article>
-		<header>
-			<h5><%- post.categories[0].name %></h5>
-		</header>
+	<article class="central-column">
+		<div class="meta">
+			<%- post.author.name %>
+		</div>
 		<div class="content">
 			<%- post.content %>
 		</div>

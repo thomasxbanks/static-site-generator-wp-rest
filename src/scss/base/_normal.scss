@@ -10,12 +10,9 @@ html {
 
 	body {
 		margin: 0; // Remove browser applied margins
-
 		$base: 1rem !default; // Define the $base as 1rem
 		font-size: $base; // Define the body copy as $base
-
 		background: $clr_white;
-
 	}
 }
 
@@ -23,17 +20,19 @@ html[data-state="is-active"] {
 	overflow: hidden;
 }
 
-main {
-	max-width: 640px;
-	margin-right: auto;
-	margin-left: auto;
-	padding: 1rem;
-}
 main img {
 	display: block;
 	max-width: 100%;
 	height: auto;
 }
+
 iframe {
 	max-width: 100% !important;
+}
+
+.central-column {
+	max-width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 1rem;
 }

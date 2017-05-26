@@ -36,6 +36,14 @@ html.redline * {
 /*********************/
 /*      EXAMPLES     */
 /*********************/
+
+:root {
+	--theme-bg: #252525;
+	--button-color: #33B3C6;
+	--button-color-rgb: 51, 179, 198;
+	--form-border: #ffffff;
+}
+
 $small: 400px;
 $large: 1000px;
 
@@ -65,4 +73,83 @@ html {
 	@media (min-width: $large) {
 		padding: 100px;
 	}
+}
+
+.cat-flag-wrapper {
+	font-size: 0.6rem;
+}
+
+.cat-flag {
+	display: inline-block;
+	padding: 0.3rem;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+	line-height: 1;
+	border-radius: 0.125rem;
+	box-shadow: none;
+    transition: ease-in 200ms;
+	text-decoration: none;
+}
+
+.cat-flag:not(:last-of-type) {
+	margin-right: 0.1rem;
+}
+
+.themed {
+	/*
+		Fall-back color for browser that do not use CSS Custom Properties
+		On these browsers, all .themed elements will be this color and not change.
+	*/
+	background-color: #252525;
+	/* CSS Custom Property set as override */
+	background: var(--theme-bg);
+	color: #fff;
+}
+
+.themed a {
+	color: #fff !important;
+}
+
+[data-theme="advertising"] {
+	--theme-bg: #489ad8;
+}
+
+[data-theme="branding"], [data-theme="public-relations"] {
+	--theme-bg: #41856f;
+}
+
+[data-theme="content-marketing"] {
+	--theme-bg: #b9ca2d;
+}
+
+[data-theme="web-design"] {
+	--theme-bg: #854d85;
+}
+
+[data-theme="seo"] {
+	--theme-bg: #23c6d8;
+}
+
+[data-theme="marketing"] {
+	--theme-bg: #ef7f30;
+}
+
+[data-theme="contact-work"] {
+	--theme-bg: #4399DA;
+}
+
+[data-theme="contact-career"] {
+	--theme-bg: #EF767A;
+}
+
+[data-theme="contact-hello"] {
+	--theme-bg: #EEB868;
+}
+
+.meta {
+	display: block;
+	padding: 2rem 1rem;
+	background: darken($clr_white, 5%);
+	box-shadow: 0 0 1rem rgba($clr_black, 0.6);
+	margin: 1rem 0;
 }

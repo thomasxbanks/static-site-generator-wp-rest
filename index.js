@@ -11,7 +11,7 @@ const ejs = require('ejs')
 const template = fs.readFileSync('./src/views/index.ejs', 'utf8')
 const navigation = []
 
-const envProd = true
+const envProd = false
 
 const baseUrl = (envProd) ? '/static-site-generator-wp-rest' : process.cwd() + '/public'
 

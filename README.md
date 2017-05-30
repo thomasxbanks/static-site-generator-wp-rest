@@ -61,7 +61,10 @@ Existing solution | Why we're not using it
 -----|-----
 [jeckyll](https://jekyllrb.com/) and other "[Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/)" | Build happens locally, no WordPress - uses markdown
 [Node on the server](http://cube-static.teamcube.co.uk/) | Potential issues with downtime, no caching - each 'static' page is generated at the time of request
+[httrack](http://www.httrack.com/html/fcguide.html) | Cube3 site took 2 hours to download, probably ages to FTP up too (`rsync`...?). Is a dumb tool, will just pull down everything - not just changes. Other than that, works perfectly. Potential for running the whole thing through a Gulp task to minify and optimise.
 
+#### Footnote
+Apparently, Jekyll will build from a JSON feed - _"you could have a cron check for the last update on your WP site, then kick off Jekyll build on a CI server, with Jekyll consuming an API."_ Will investigate this.
 _____
 
 ## Issues
@@ -70,4 +73,5 @@ Things I have noticed during the duration of this experiment that are difficult 
   - the API return varies from site-to-site, resulting in a potentially large chunk of time sanitising the return data.
 1. Retro-fitting this to existing projects is harder than doing it from scratch.
 1. Not found a viable solution for only updating what has changed yet.
-1. Menus (`wp-admin/appearance/menus`), unless hard-coded or dynamically-generated at build time, are hard to get hold of without editing PHP, modifying core WP, or installing a plugin.
+1. Menus (`wp-admin/appearance/menus`), unless hard-coded or dynamically-generated at build time, are hard to get hold of without editing PHP, modifying core WP, or installing a [plugin](https://wordpress.stackexchange.com/questions/209381/get-wp-navigation-menu-from-rest-api-v2).
+1. Requires rebuilding the entire front-end - no reuse of existing templates (not a problem for a new build but lots of work for a conversion - _**Update:**_ [Liquid](https://shopify.github.io/liquid/) is Shopify's templating language and is similar to twig meaning we _may_ be able to leverage existing templates.)

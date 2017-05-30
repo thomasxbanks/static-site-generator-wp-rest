@@ -289,7 +289,7 @@ const makeArchivePage = (posts) => {
 		posts: posts
 	})
 
-	console.log("*************************************\nARCHIVE PAGE:\n", posts)
+	// console.log("*************************************\nARCHIVE PAGE:\n", posts)
 
 	fs.writeFile('./src/pages/archive.html', content, {
 		flag: 'w'

@@ -1,0 +1,22 @@
+.grid {
+	font-size: 0;
+}
+
+.card {
+	display: inline-block;
+	vertical-align: top;
+	font-size: $font_size-std;
+}
+
+.post-teaser {
+	width: calc(300px - 2rem);
+	margin: 1rem;
+	img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+	}
+	.inner, header, footer {
+		padding: 1rem;
+	}
+}

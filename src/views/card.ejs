@@ -1,12 +1,14 @@
 <article class="card post-teaser">
-    <img src="${post.hero.full.location}" alt="${post.hero.alt_text}">
-    <div class="inner">
-        <header>
-            <h2>
-                ${post.title}
-            </h2>
-        </header>
-        ${post.excerpt}
-        <a href="${post.url}" class="button">Read more</a>
-    </div>
+	<img src="<%- post.hero.full.location %>" alt="<%- post.hero.alt_text %>">
+	<header>
+		<h2>
+            <%- post.title %>
+        </h2>
+	</header>
+	<div class="inner">
+		<%- post.excerpt %>
+	</div>
+	<footer>
+		<a href="<%- post.url %>" class="button">Read more</a>
+	</footer>
 </article>

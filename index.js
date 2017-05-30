@@ -27,10 +27,10 @@ server.listen(port, (err) => {
 		return console.log('something bad happened', err)
 	}
 
-	getPostsAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
+	//getPostsAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
 
 
-	//getAPI('http://wearecube3.com/wp-json/')
+	getAPI('http://wearecube3.com/wp-json/')
 
 	console.log(`server is listening on ${port}`)
 })
@@ -104,6 +104,7 @@ const postsJson = (data) => {
 const getAPI = (endpoint) => {
 	axios.get(endpoint).then((response) => {
 		postsJson(response.data)
+		console.log(response.data)
 	}).catch((error) => {
 		console.log(error)
 	})
@@ -195,6 +196,7 @@ const satintisePostData = (datum) => {
 		id: datum.id,
 		title: datum.title.rendered,
 		slug: datum.slug,
+		url: baseUrl + '/pages/single-post/' + datum.slug + '.html',
 		date: {
 			posted: datum.date,
 			modified: datum.modified
@@ -287,7 +289,9 @@ const makeArchivePage = (posts) => {
 		posts: posts
 	})
 
-	fs.writeFile('./src/index.html', content, {
+	console.log("*************************************\nARCHIVE PAGE:\n", posts)
+
+	fs.writeFile('./src/pages/archive.html', content, {
 		flag: 'w'
 	}, function(err) {
 		if (err) throw err

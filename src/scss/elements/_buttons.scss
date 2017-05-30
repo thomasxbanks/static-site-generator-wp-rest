@@ -11,6 +11,16 @@ button {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent; // i.e. Nexus5/Chrome and Kindle Fire HD 7"
     border: none;
+    padding: 1rem 1.5rem;
+    background: $clr_brand;
+    color: $clr_white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font_size-sml;
+    font-weight: bold;
+    &:hover, &:focus {
+        background: lighten($clr_brand, 10%);
+    }
 }
 
 button::-moz-focus-inner,
@@ -25,4 +35,9 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: 0;
+}
+
+.button {
+    @extend button;
+    text-decoration: none;
 }

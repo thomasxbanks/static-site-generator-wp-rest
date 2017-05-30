@@ -1,6 +1,6 @@
 # Static WordPress Site Generator
 
-## User stories
+## Feature justification by stakeholder
 - **As a** content editor, **I want** to continue using the WordPress CMS **so that** I don't have to learn a new system.
 - **As a** site user, **I want** a fast, efficient site **so that** I am not losing time or bandwidth.
 - **As a** business, **I want** a fast, efficient site **so that** users are not put off by lengthy load times.
@@ -70,3 +70,4 @@ Things I have noticed during the duration of this experiment that are difficult 
   - the API return varies from site-to-site, resulting in a potentially large chunk of time sanitising the return data.
 1. Retro-fitting this to existing projects is harder than doing it from scratch.
 1. Not found a viable solution for only updating what has changed yet.
+1. Menus (`wp-admin/appearance/menus`), unless hard-coded or dynamically-generated at build time, are hard to get hold of without editing PHP, modifying core WP, or installing a plugin.

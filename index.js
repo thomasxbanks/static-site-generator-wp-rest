@@ -37,51 +37,6 @@ server.listen(port, (err) => {
 
 const makePostFile = (post) => {
 
-
-	// const template = `
-	// 	<!DOCTYPE html>
-	// 	<html lang="en">
-	//
-	// 	<head>
-	// 	<meta charset="UTF-8">
-	// 	<title>Page Hero</title>
-	// 	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
-	// 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	// 	<link href="/static-site-generator-wp-rest/css/style.css" rel="stylesheet">
-	// 	</head>
-	//
-	// 	<body>
-	// 	<section class="page_hero">
-	// 		<img class="hero_img-thumb" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.thumb.filename}" />
-	// 		<img class="hero_img-full" src="/static-site-generator-wp-rest/images/single-post-images/${post.slug}/${post.hero.full.filename}" />
-	// 		<div class="inner">
-	// 			<div class="texture">
-	// 			<h1>${post.title}</h1>
-	// 			<p>By ${post.author.name}</p>
-	// 			</div>
-	// 		</div>
-	// 	</section>
-	// 	<main>
-	// 		<h5>${post.categories[0].name}</h5>
-	// 		${post.content}
-	// 	</main>
-	// 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	// 	<script>
-	// 		$(document).ready(function() {
-	// 			$('.hero_img-full').one("load", function() {
-	// 				$('.hero_img-thumb').animate({
-	// 					'opacity': 0
-	// 				}, 500)
-	// 			}).each(function() {
-	// 				if (this.complete) $(this).load()
-	// 			})
-	// 		})
-	// 	</script>
-	// 	</body>
-	//
-	// 	</html>
-	// `
-
 	var fileName = './src/pages/single-post/' + post.slug + ".html"
 
 	let content = ejs.render(template, {
@@ -221,6 +176,9 @@ const sanitiseAllPosts = (data) => {
 			// console.log(posts)
 			posts.forEach((post) => {
 				makePostFile(post)
+				if (posts.length === data.length){
+					makeArchivePage(posts)
+				}
 			})
 
 		}
@@ -317,6 +275,23 @@ const generateNavigation = (data) => {
 			makeHomePage(navigation)
 			sanitiseAllPosts(data)
 		}
+	})
+}
+
+const makeArchivePage = (posts) => {
+	let content = ejs.render(template, {
+		filename: './src/views/index.ejs',
+		templateName: 'archive',
+		stylesheet: baseUrl + '/css/style.css',
+		links: [],
+		posts: posts
+	})
+
+	fs.writeFile('./src/index.html', content, {
+		flag: 'w'
+	}, function(err) {
+		if (err) throw err
+		// console.log("Saved:", post.slug + ".html")
 	})
 }
 

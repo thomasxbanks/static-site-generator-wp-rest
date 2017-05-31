@@ -1,3391 +1,422 @@
-{
-  "name": "Cube3",
-  "description": "",
-  "url": "http://wearecube3.com/wp",
-  "home": "http://wearecube3.com",
-  "gmt_offset": "0",
-  "timezone_string": "",
-  "namespaces": [
-    "oembed/1.0",
-    "yoast/v1",
-    "wp/v2"
-  ],
-  "authentication": [],
-  "routes": {
-    "/": {
-      "namespace": "",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/"
+[
+  {
+    "id": 7483,
+    "title": "Cube3 moves to the NQ",
+    "slug": "cube3-moves-nq",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/cube3-moves-nq.html",
+    "date": {
+      "posted": "2017-05-30T12:40:26",
+      "modified": "2017-05-30T13:34:40"
+    },
+    "author": {
+      "name": "Elle Mecrow",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/elle_mecrow/",
+      "avatar": "http://1.gravatar.com/avatar/ddf6f1b4d20e15f0a66e49eac6fe9a09?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>Vibrant culture. Creative flare. Industrial heritage. This is what Manchester’s NQ is known for. So it’s the perfect place for our innovative business growth consultancy. As a company of inventive forward-thinkers, it only seemed natural to find our home in the creative heart of the city. Our new 7,500 square foot office gives us plenty [&hellip;]</p>\n",
+    "content": "<p>Vibrant culture. Creative flare. Industrial heritage. This is what Manchester’s NQ is known for. So it’s the perfect place for our innovative business growth consultancy. As a company of inventive forward-thinkers, it only seemed natural to find our home in the creative heart of the city.</p>\n<p><iframe src=\"https://www.youtube.com/embed/OKbSRdaEjE4\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p>Our new 7,500 square foot office gives us plenty of space to expand, having outgrown our last office at Princess Street. The open-plan layout and industrial style of our new place was a great starting point, but by adding some striking graffiti artwork, installing a bar (of course) and setting up our trusty pool table, we’ve really made it our own. Now we’re excited to have a space that inspires creativity and innovation.</p>\n<p>We’ve come a long way since we first started in 1999, and with an exciting business growth plan and an office to match our ambition, we really think you ain’t seen nothing yet.</p>\n<p>In marketing, we know that change is the only constant. This dynamic and fast-paced industry requires marketers to continuously rethink, adapt and transform, or risk becoming sidelined when they should be at the heart of a business. With the goalposts constantly shifting, agility and innovation are vital to staying ahead of the curve.</p>\n<p>Globalisation and advances in technology create an increasingly interconnected world. A world saturated by customer touch-points, with more choice, more noise and more media pollution, all competing for the attention of the consumer. Today, simply selling is not enough.</p>\n<p>But, this new world has also increased opportunity, for those brave enough to seize it. Those realising that despite all of this change, the customer remains at the epicentre. Those who recognise that there is no one solution. Agile thinkers and brave innovators willing to navigate the changing field of marketing and transverse traditional boundaries. Those who can ignite growth through innovation.</p>\n<p>A brave new world requires a brave new us. And we’re ready. What’s around the corner? Who knows? But we’ll be at the forefront of change, no matter what. Living for today, innovating for tomorrow.</p>\n<p><a href=\"http://wearecube3.com/contact/\">Get in touch</a> to join us on our journey.</p>\n",
+    "hero": {
+      "alt": "Cube3 moves to the NQ",
+      "caption": "",
+      "full": {
+        "filename": "officeblogimage.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/cube3-moves-nq/officeblogimage.jpg"
+      },
+      "thumb": {
+        "filename": "officeblogimage-300x156.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/cube3-moves-nq/officeblogimage-300x156.jpg"
       }
     },
-    "/oembed/1.0": {
-      "namespace": "oembed/1.0",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "namespace": {
-              "required": false,
-              "default": "oembed/1.0"
-            },
-            "context": {
-              "required": false,
-              "default": "view"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/oembed/1.0"
-      }
-    },
-    "/oembed/1.0/embed": {
-      "namespace": "oembed/1.0",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "url": {
-              "required": true
-            },
-            "format": {
-              "required": false,
-              "default": "json"
-            },
-            "maxwidth": {
-              "required": false,
-              "default": 600
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/oembed/1.0/embed"
-      }
-    },
-    "/yoast/v1": {
-      "namespace": "yoast/v1",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "namespace": {
-              "required": false,
-              "default": "yoast/v1"
-            },
-            "context": {
-              "required": false,
-              "default": "view"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/yoast/v1"
-      }
-    },
-    "/yoast/v1/configurator": {
-      "namespace": "yoast/v1",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": []
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": []
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/yoast/v1/configurator"
-      }
-    },
-    "/wp/v2": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "namespace": {
-              "required": false,
-              "default": "wp/v2"
-            },
-            "context": {
-              "required": false,
-              "default": "view"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2"
-      }
-    },
-    "/wp/v2/posts": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "after": {
-              "required": false,
-              "description": "Limit response to posts published after a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "author": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to posts assigned to specific authors.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "author_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes posts assigned to specific authors.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "before": {
-              "required": false,
-              "description": "Limit response to posts published before a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "offset": {
-              "required": false,
-              "description": "Offset the result set by a specific number of items.",
-              "type": "integer"
-            },
-            "order": {
-              "required": false,
-              "default": "desc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "date",
-              "enum": [
-                "date",
-                "relevance",
-                "id",
-                "include",
-                "title",
-                "slug"
-              ],
-              "description": "Sort collection by object attribute.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "Limit result set to posts with one or more specific slugs.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "status": {
-              "required": false,
-              "default": "publish",
-              "description": "Limit result set to posts assigned one or more statuses.",
-              "type": "array",
-              "items": {
-                "enum": [
-                  "publish",
-                  "future",
-                  "draft",
-                  "pending",
-                  "private",
-                  "trash",
-                  "auto-draft",
-                  "inherit",
-                  "acf-disabled",
-                  "any"
-                ],
-                "type": "string"
-              }
-            },
-            "categories": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to all items that have the specified term assigned in the categories taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "categories_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to all items except those that have the specified term assigned in the categories taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "tags": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to all items that have the specified term assigned in the tags taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "tags_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to all items except those that have the specified term assigned in the tags taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "sticky": {
-              "required": false,
-              "description": "Limit result set to items that are sticky.",
-              "type": "boolean"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the object unique to its type.",
-              "type": "string"
-            },
-            "status": {
-              "required": false,
-              "enum": [
-                "publish",
-                "future",
-                "draft",
-                "pending",
-                "private",
-                "acf-disabled"
-              ],
-              "description": "A named status for the object.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "A password to protect access to the content and excerpt.",
-              "type": "string"
-            },
-            "title": {
-              "required": false,
-              "description": "The title for the object.",
-              "type": "object"
-            },
-            "content": {
-              "required": false,
-              "description": "The content for the object.",
-              "type": "object"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID for the author of the object.",
-              "type": "integer"
-            },
-            "excerpt": {
-              "required": false,
-              "description": "The excerpt for the object.",
-              "type": "object"
-            },
-            "featured_media": {
-              "required": false,
-              "description": "The ID of the featured media for the object.",
-              "type": "integer"
-            },
-            "comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not comments are open on the object.",
-              "type": "string"
-            },
-            "ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not the object can be pinged.",
-              "type": "string"
-            },
-            "format": {
-              "required": false,
-              "enum": [
-                "standard",
-                "aside",
-                "chat",
-                "gallery",
-                "link",
-                "image",
-                "quote",
-                "status",
-                "video",
-                "audio"
-              ],
-              "description": "The format for the object.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            },
-            "sticky": {
-              "required": false,
-              "description": "Whether or not the object should be treated as sticky.",
-              "type": "boolean"
-            },
-            "template": {
-              "required": false,
-              "enum": [
-                ""
-              ],
-              "description": "The theme file to use to display the object.",
-              "type": "string"
-            },
-            "categories": {
-              "required": false,
-              "description": "The terms assigned to the object in the category taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "tags": {
-              "required": false,
-              "description": "The terms assigned to the object in the post_tag taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/posts"
-      }
-    },
-    "/wp/v2/posts/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "The password for the post if it is password protected.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the object unique to its type.",
-              "type": "string"
-            },
-            "status": {
-              "required": false,
-              "enum": [
-                "publish",
-                "future",
-                "draft",
-                "pending",
-                "private",
-                "acf-disabled"
-              ],
-              "description": "A named status for the object.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "A password to protect access to the content and excerpt.",
-              "type": "string"
-            },
-            "title": {
-              "required": false,
-              "description": "The title for the object.",
-              "type": "object"
-            },
-            "content": {
-              "required": false,
-              "description": "The content for the object.",
-              "type": "object"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID for the author of the object.",
-              "type": "integer"
-            },
-            "excerpt": {
-              "required": false,
-              "description": "The excerpt for the object.",
-              "type": "object"
-            },
-            "featured_media": {
-              "required": false,
-              "description": "The ID of the featured media for the object.",
-              "type": "integer"
-            },
-            "comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not comments are open on the object.",
-              "type": "string"
-            },
-            "ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not the object can be pinged.",
-              "type": "string"
-            },
-            "format": {
-              "required": false,
-              "enum": [
-                "standard",
-                "aside",
-                "chat",
-                "gallery",
-                "link",
-                "image",
-                "quote",
-                "status",
-                "video",
-                "audio"
-              ],
-              "description": "The format for the object.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            },
-            "sticky": {
-              "required": false,
-              "description": "Whether or not the object should be treated as sticky.",
-              "type": "boolean"
-            },
-            "template": {
-              "required": false,
-              "enum": [
-                ""
-              ],
-              "description": "The theme file to use to display the object.",
-              "type": "string"
-            },
-            "categories": {
-              "required": false,
-              "description": "The terms assigned to the object in the category taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "tags": {
-              "required": false,
-              "description": "The terms assigned to the object in the post_tag taxonomy.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Whether to bypass trash and force deletion.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/posts/(?P<parent>[\\d]+)/revisions": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/posts/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Required to be true, as revisions do not support trashing.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/pages": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "after": {
-              "required": false,
-              "description": "Limit response to posts published after a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "author": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to posts assigned to specific authors.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "author_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes posts assigned to specific authors.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "before": {
-              "required": false,
-              "description": "Limit response to posts published before a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "menu_order": {
-              "required": false,
-              "description": "Limit result set to posts with a specific menu_order value.",
-              "type": "integer"
-            },
-            "offset": {
-              "required": false,
-              "description": "Offset the result set by a specific number of items.",
-              "type": "integer"
-            },
-            "order": {
-              "required": false,
-              "default": "desc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "date",
-              "enum": [
-                "date",
-                "relevance",
-                "id",
-                "include",
-                "title",
-                "slug",
-                "menu_order"
-              ],
-              "description": "Sort collection by object attribute.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to those of particular parent IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "parent_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to all items except those of a particular parent ID.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "slug": {
-              "required": false,
-              "description": "Limit result set to posts with one or more specific slugs.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "status": {
-              "required": false,
-              "default": "publish",
-              "description": "Limit result set to posts assigned one or more statuses.",
-              "type": "array",
-              "items": {
-                "enum": [
-                  "publish",
-                  "future",
-                  "draft",
-                  "pending",
-                  "private",
-                  "trash",
-                  "auto-draft",
-                  "inherit",
-                  "acf-disabled",
-                  "any"
-                ],
-                "type": "string"
-              }
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the object unique to its type.",
-              "type": "string"
-            },
-            "status": {
-              "required": false,
-              "enum": [
-                "publish",
-                "future",
-                "draft",
-                "pending",
-                "private",
-                "acf-disabled"
-              ],
-              "description": "A named status for the object.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "A password to protect access to the content and excerpt.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "title": {
-              "required": false,
-              "description": "The title for the object.",
-              "type": "object"
-            },
-            "content": {
-              "required": false,
-              "description": "The content for the object.",
-              "type": "object"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID for the author of the object.",
-              "type": "integer"
-            },
-            "excerpt": {
-              "required": false,
-              "description": "The excerpt for the object.",
-              "type": "object"
-            },
-            "featured_media": {
-              "required": false,
-              "description": "The ID of the featured media for the object.",
-              "type": "integer"
-            },
-            "comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not comments are open on the object.",
-              "type": "string"
-            },
-            "ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not the object can be pinged.",
-              "type": "string"
-            },
-            "menu_order": {
-              "required": false,
-              "description": "The order of the object in relation to other object of its type.",
-              "type": "integer"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            },
-            "template": {
-              "required": false,
-              "enum": [
-                "template-404.php",
-                "template-contact.php",
-                "template-docs.php",
-                "template-page-builder.php",
-                "template-services-landing.php",
-                ""
-              ],
-              "description": "The theme file to use to display the object.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/pages"
-      }
-    },
-    "/wp/v2/pages/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "The password for the post if it is password protected.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the object unique to its type.",
-              "type": "string"
-            },
-            "status": {
-              "required": false,
-              "enum": [
-                "publish",
-                "future",
-                "draft",
-                "pending",
-                "private",
-                "acf-disabled"
-              ],
-              "description": "A named status for the object.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "A password to protect access to the content and excerpt.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "title": {
-              "required": false,
-              "description": "The title for the object.",
-              "type": "object"
-            },
-            "content": {
-              "required": false,
-              "description": "The content for the object.",
-              "type": "object"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID for the author of the object.",
-              "type": "integer"
-            },
-            "excerpt": {
-              "required": false,
-              "description": "The excerpt for the object.",
-              "type": "object"
-            },
-            "featured_media": {
-              "required": false,
-              "description": "The ID of the featured media for the object.",
-              "type": "integer"
-            },
-            "comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not comments are open on the object.",
-              "type": "string"
-            },
-            "ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not the object can be pinged.",
-              "type": "string"
-            },
-            "menu_order": {
-              "required": false,
-              "description": "The order of the object in relation to other object of its type.",
-              "type": "integer"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            },
-            "template": {
-              "required": false,
-              "enum": [
-                "template-404.php",
-                "template-contact.php",
-                "template-docs.php",
-                "template-page-builder.php",
-                "template-services-landing.php",
-                ""
-              ],
-              "description": "The theme file to use to display the object.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Whether to bypass trash and force deletion.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/pages/(?P<parent>[\\d]+)/revisions": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/pages/(?P<parent>[\\d]+)/revisions/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Required to be true, as revisions do not support trashing.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/media": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "after": {
-              "required": false,
-              "description": "Limit response to posts published after a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "author": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to posts assigned to specific authors.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "author_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes posts assigned to specific authors.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "before": {
-              "required": false,
-              "description": "Limit response to posts published before a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "offset": {
-              "required": false,
-              "description": "Offset the result set by a specific number of items.",
-              "type": "integer"
-            },
-            "order": {
-              "required": false,
-              "default": "desc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "date",
-              "enum": [
-                "date",
-                "relevance",
-                "id",
-                "include",
-                "title",
-                "slug"
-              ],
-              "description": "Sort collection by object attribute.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to those of particular parent IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "parent_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to all items except those of a particular parent ID.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "slug": {
-              "required": false,
-              "description": "Limit result set to posts with one or more specific slugs.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "status": {
-              "required": false,
-              "default": "inherit",
-              "description": "Limit result set to posts assigned one or more statuses.",
-              "type": "array",
-              "items": {
-                "enum": [
-                  "inherit",
-                  "private",
-                  "trash"
-                ],
-                "type": "string"
-              }
-            },
-            "media_type": {
-              "required": false,
-              "enum": [
-                "image",
-                "video",
-                "text",
-                "application",
-                "audio"
-              ],
-              "description": "Limit result set to attachments of a particular media type.",
-              "type": "string"
-            },
-            "mime_type": {
-              "required": false,
-              "description": "Limit result set to attachments of a particular MIME type.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the object unique to its type.",
-              "type": "string"
-            },
-            "status": {
-              "required": false,
-              "enum": [
-                "publish",
-                "future",
-                "draft",
-                "pending",
-                "private",
-                "acf-disabled"
-              ],
-              "description": "A named status for the object.",
-              "type": "string"
-            },
-            "title": {
-              "required": false,
-              "description": "The title for the object.",
-              "type": "object"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID for the author of the object.",
-              "type": "integer"
-            },
-            "comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not comments are open on the object.",
-              "type": "string"
-            },
-            "ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not the object can be pinged.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            },
-            "template": {
-              "required": false,
-              "enum": [
-                ""
-              ],
-              "description": "The theme file to use to display the object.",
-              "type": "string"
-            },
-            "alt_text": {
-              "required": false,
-              "description": "Alternative text to display when attachment is not displayed.",
-              "type": "string"
-            },
-            "caption": {
-              "required": false,
-              "description": "The attachment caption.",
-              "type": "object"
-            },
-            "description": {
-              "required": false,
-              "description": "The attachment description.",
-              "type": "object"
-            },
-            "post": {
-              "required": false,
-              "description": "The ID for the associated post of the attachment.",
-              "type": "integer"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/media"
-      }
-    },
-    "/wp/v2/media/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the object unique to its type.",
-              "type": "string"
-            },
-            "status": {
-              "required": false,
-              "enum": [
-                "publish",
-                "future",
-                "draft",
-                "pending",
-                "private",
-                "acf-disabled"
-              ],
-              "description": "A named status for the object.",
-              "type": "string"
-            },
-            "title": {
-              "required": false,
-              "description": "The title for the object.",
-              "type": "object"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID for the author of the object.",
-              "type": "integer"
-            },
-            "comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not comments are open on the object.",
-              "type": "string"
-            },
-            "ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Whether or not the object can be pinged.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            },
-            "template": {
-              "required": false,
-              "enum": [
-                ""
-              ],
-              "description": "The theme file to use to display the object.",
-              "type": "string"
-            },
-            "alt_text": {
-              "required": false,
-              "description": "Alternative text to display when attachment is not displayed.",
-              "type": "string"
-            },
-            "caption": {
-              "required": false,
-              "description": "The attachment caption.",
-              "type": "object"
-            },
-            "description": {
-              "required": false,
-              "description": "The attachment description.",
-              "type": "object"
-            },
-            "post": {
-              "required": false,
-              "description": "The ID for the associated post of the attachment.",
-              "type": "integer"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Whether to bypass trash and force deletion.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/types": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/types"
-      }
-    },
-    "/wp/v2/types/(?P<type>[\\w-]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "type": {
-              "required": false,
-              "description": "An alphanumeric identifier for the post type.",
-              "type": "string"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/statuses": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/statuses"
-      }
-    },
-    "/wp/v2/statuses/(?P<status>[\\w-]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "status": {
-              "required": false,
-              "description": "An alphanumeric identifier for the status.",
-              "type": "string"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/taxonomies": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "type": {
-              "required": false,
-              "description": "Limit results to taxonomies associated with a specific post type.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/taxonomies"
-      }
-    },
-    "/wp/v2/taxonomies/(?P<taxonomy>[\\w-]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "taxonomy": {
-              "required": false,
-              "description": "An alphanumeric identifier for the taxonomy.",
-              "type": "string"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/categories": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "order": {
-              "required": false,
-              "default": "asc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "name",
-              "enum": [
-                "id",
-                "include",
-                "name",
-                "slug",
-                "term_group",
-                "description",
-                "count"
-              ],
-              "description": "Sort collection by term attribute.",
-              "type": "string"
-            },
-            "hide_empty": {
-              "required": false,
-              "default": false,
-              "description": "Whether to hide terms not assigned to any posts.",
-              "type": "boolean"
-            },
-            "parent": {
-              "required": false,
-              "description": "Limit result set to terms assigned to a specific parent.",
-              "type": "integer"
-            },
-            "post": {
-              "required": false,
-              "description": "Limit result set to terms assigned to a specific post.",
-              "type": "integer"
-            },
-            "slug": {
-              "required": false,
-              "description": "Limit result set to terms with a specific slug.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "description": {
-              "required": false,
-              "description": "HTML description of the term.",
-              "type": "string"
-            },
-            "name": {
-              "required": true,
-              "description": "HTML title for the term.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the term unique to its type.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "description": "The parent term ID.",
-              "type": "integer"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/categories"
-      }
-    },
-    "/wp/v2/categories/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the term.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the term.",
-              "type": "integer"
-            },
-            "description": {
-              "required": false,
-              "description": "HTML description of the term.",
-              "type": "string"
-            },
-            "name": {
-              "required": false,
-              "description": "HTML title for the term.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the term unique to its type.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "description": "The parent term ID.",
-              "type": "integer"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the term.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Required to be true, as terms do not support trashing.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/tags": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "offset": {
-              "required": false,
-              "description": "Offset the result set by a specific number of items.",
-              "type": "integer"
-            },
-            "order": {
-              "required": false,
-              "default": "asc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "name",
-              "enum": [
-                "id",
-                "include",
-                "name",
-                "slug",
-                "term_group",
-                "description",
-                "count"
-              ],
-              "description": "Sort collection by term attribute.",
-              "type": "string"
-            },
-            "hide_empty": {
-              "required": false,
-              "default": false,
-              "description": "Whether to hide terms not assigned to any posts.",
-              "type": "boolean"
-            },
-            "post": {
-              "required": false,
-              "description": "Limit result set to terms assigned to a specific post.",
-              "type": "integer"
-            },
-            "slug": {
-              "required": false,
-              "description": "Limit result set to terms with a specific slug.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "description": {
-              "required": false,
-              "description": "HTML description of the term.",
-              "type": "string"
-            },
-            "name": {
-              "required": true,
-              "description": "HTML title for the term.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the term unique to its type.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/tags"
-      }
-    },
-    "/wp/v2/tags/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the term.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the term.",
-              "type": "integer"
-            },
-            "description": {
-              "required": false,
-              "description": "HTML description of the term.",
-              "type": "string"
-            },
-            "name": {
-              "required": false,
-              "description": "HTML title for the term.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the term unique to its type.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the term.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Required to be true, as terms do not support trashing.",
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/users": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "offset": {
-              "required": false,
-              "description": "Offset the result set by a specific number of items.",
-              "type": "integer"
-            },
-            "order": {
-              "required": false,
-              "default": "asc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "name",
-              "enum": [
-                "id",
-                "include",
-                "name",
-                "registered_date",
-                "slug",
-                "email",
-                "url"
-              ],
-              "description": "Sort collection by object attribute.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "Limit result set to users with a specific slug.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "roles": {
-              "required": false,
-              "description": "Limit result set to users matching at least one specific role provided. Accepts csv list or single role.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "username": {
-              "required": true,
-              "description": "Login name for the user.",
-              "type": "string"
-            },
-            "name": {
-              "required": false,
-              "description": "Display name for the user.",
-              "type": "string"
-            },
-            "first_name": {
-              "required": false,
-              "description": "First name for the user.",
-              "type": "string"
-            },
-            "last_name": {
-              "required": false,
-              "description": "Last name for the user.",
-              "type": "string"
-            },
-            "email": {
-              "required": true,
-              "description": "The email address for the user.",
-              "type": "string"
-            },
-            "url": {
-              "required": false,
-              "description": "URL of the user.",
-              "type": "string"
-            },
-            "description": {
-              "required": false,
-              "description": "Description of the user.",
-              "type": "string"
-            },
-            "locale": {
-              "required": false,
-              "enum": [
-                "",
-                "en_US"
-              ],
-              "description": "Locale for the user.",
-              "type": "string"
-            },
-            "nickname": {
-              "required": false,
-              "description": "The nickname for the user.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the user.",
-              "type": "string"
-            },
-            "roles": {
-              "required": false,
-              "description": "Roles assigned to the user.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "password": {
-              "required": true,
-              "description": "Password for the user (never included).",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/users"
-      }
-    },
-    "/wp/v2/users/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the user.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the user.",
-              "type": "integer"
-            },
-            "username": {
-              "required": false,
-              "description": "Login name for the user.",
-              "type": "string"
-            },
-            "name": {
-              "required": false,
-              "description": "Display name for the user.",
-              "type": "string"
-            },
-            "first_name": {
-              "required": false,
-              "description": "First name for the user.",
-              "type": "string"
-            },
-            "last_name": {
-              "required": false,
-              "description": "Last name for the user.",
-              "type": "string"
-            },
-            "email": {
-              "required": false,
-              "description": "The email address for the user.",
-              "type": "string"
-            },
-            "url": {
-              "required": false,
-              "description": "URL of the user.",
-              "type": "string"
-            },
-            "description": {
-              "required": false,
-              "description": "Description of the user.",
-              "type": "string"
-            },
-            "locale": {
-              "required": false,
-              "enum": [
-                "",
-                "en_US"
-              ],
-              "description": "Locale for the user.",
-              "type": "string"
-            },
-            "nickname": {
-              "required": false,
-              "description": "The nickname for the user.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the user.",
-              "type": "string"
-            },
-            "roles": {
-              "required": false,
-              "description": "Roles assigned to the user.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "password": {
-              "required": false,
-              "description": "Password for the user (never included).",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the user.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Required to be true, as users do not support trashing.",
-              "type": "boolean"
-            },
-            "reassign": {
-              "required": true,
-              "description": "Reassign the deleted user's posts and links to this user ID.",
-              "type": "integer"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/users/me": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "username": {
-              "required": false,
-              "description": "Login name for the user.",
-              "type": "string"
-            },
-            "name": {
-              "required": false,
-              "description": "Display name for the user.",
-              "type": "string"
-            },
-            "first_name": {
-              "required": false,
-              "description": "First name for the user.",
-              "type": "string"
-            },
-            "last_name": {
-              "required": false,
-              "description": "Last name for the user.",
-              "type": "string"
-            },
-            "email": {
-              "required": false,
-              "description": "The email address for the user.",
-              "type": "string"
-            },
-            "url": {
-              "required": false,
-              "description": "URL of the user.",
-              "type": "string"
-            },
-            "description": {
-              "required": false,
-              "description": "Description of the user.",
-              "type": "string"
-            },
-            "locale": {
-              "required": false,
-              "enum": [
-                "",
-                "en_US"
-              ],
-              "description": "Locale for the user.",
-              "type": "string"
-            },
-            "nickname": {
-              "required": false,
-              "description": "The nickname for the user.",
-              "type": "string"
-            },
-            "slug": {
-              "required": false,
-              "description": "An alphanumeric identifier for the user.",
-              "type": "string"
-            },
-            "roles": {
-              "required": false,
-              "description": "Roles assigned to the user.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "password": {
-              "required": false,
-              "description": "Password for the user (never included).",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Required to be true, as users do not support trashing.",
-              "type": "boolean"
-            },
-            "reassign": {
-              "required": true,
-              "description": "Reassign the deleted user's posts and links to this user ID.",
-              "type": "integer"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/users/me"
-      }
-    },
-    "/wp/v2/comments": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "page": {
-              "required": false,
-              "default": 1,
-              "description": "Current page of the collection.",
-              "type": "integer"
-            },
-            "per_page": {
-              "required": false,
-              "default": 10,
-              "description": "Maximum number of items to be returned in result set.",
-              "type": "integer"
-            },
-            "search": {
-              "required": false,
-              "description": "Limit results to those matching a string.",
-              "type": "string"
-            },
-            "after": {
-              "required": false,
-              "description": "Limit response to comments published after a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "author": {
-              "required": false,
-              "description": "Limit result set to comments assigned to specific user IDs. Requires authorization.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "author_exclude": {
-              "required": false,
-              "description": "Ensure result set excludes comments assigned to specific user IDs. Requires authorization.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "author_email": {
-              "required": false,
-              "description": "Limit result set to that from a specific author email. Requires authorization.",
-              "type": "string"
-            },
-            "before": {
-              "required": false,
-              "description": "Limit response to comments published before a given ISO8601 compliant date.",
-              "type": "string"
-            },
-            "exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "include": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to specific IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "offset": {
-              "required": false,
-              "description": "Offset the result set by a specific number of items.",
-              "type": "integer"
-            },
-            "order": {
-              "required": false,
-              "default": "desc",
-              "enum": [
-                "asc",
-                "desc"
-              ],
-              "description": "Order sort attribute ascending or descending.",
-              "type": "string"
-            },
-            "orderby": {
-              "required": false,
-              "default": "date_gmt",
-              "enum": [
-                "date",
-                "date_gmt",
-                "id",
-                "include",
-                "post",
-                "parent",
-                "type"
-              ],
-              "description": "Sort collection by object attribute.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to comments of specific parent IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "parent_exclude": {
-              "required": false,
-              "default": [],
-              "description": "Ensure result set excludes specific parent IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "post": {
-              "required": false,
-              "default": [],
-              "description": "Limit result set to comments assigned to specific post IDs.",
-              "type": "array",
-              "items": {
-                "type": "integer"
-              }
-            },
-            "status": {
-              "required": false,
-              "default": "approve",
-              "description": "Limit result set to comments assigned a specific status. Requires authorization.",
-              "type": "string"
-            },
-            "type": {
-              "required": false,
-              "default": "comment",
-              "description": "Limit result set to comments assigned a specific type. Requires authorization.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "The password for the post if it is password protected.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST"
-          ],
-          "args": {
-            "author": {
-              "required": false,
-              "description": "The ID of the user object, if author was a user.",
-              "type": "integer"
-            },
-            "author_email": {
-              "required": false,
-              "description": "Email address for the object author.",
-              "type": "string"
-            },
-            "author_ip": {
-              "required": false,
-              "description": "IP address for the object author.",
-              "type": "string"
-            },
-            "author_name": {
-              "required": false,
-              "description": "Display name for the object author.",
-              "type": "string"
-            },
-            "author_url": {
-              "required": false,
-              "description": "URL for the object author.",
-              "type": "string"
-            },
-            "author_user_agent": {
-              "required": false,
-              "description": "User agent for the object author.",
-              "type": "string"
-            },
-            "content": {
-              "required": false,
-              "description": "The content for the object.",
-              "type": "object"
-            },
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "default": 0,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "post": {
-              "required": false,
-              "default": 0,
-              "description": "The ID of the associated post object.",
-              "type": "integer"
-            },
-            "status": {
-              "required": false,
-              "description": "State of the object.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/comments"
-      }
-    },
-    "/wp/v2/comments/(?P<id>[\\d]+)": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH",
-        "DELETE"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "context": {
-              "required": false,
-              "default": "view",
-              "enum": [
-                "view",
-                "embed",
-                "edit"
-              ],
-              "description": "Scope under which the request is made; determines fields present in response.",
-              "type": "string"
-            },
-            "password": {
-              "required": false,
-              "description": "The password for the post if it is password protected.",
-              "type": "string"
-            }
-          }
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "author": {
-              "required": false,
-              "description": "The ID of the user object, if author was a user.",
-              "type": "integer"
-            },
-            "author_email": {
-              "required": false,
-              "description": "Email address for the object author.",
-              "type": "string"
-            },
-            "author_ip": {
-              "required": false,
-              "description": "IP address for the object author.",
-              "type": "string"
-            },
-            "author_name": {
-              "required": false,
-              "description": "Display name for the object author.",
-              "type": "string"
-            },
-            "author_url": {
-              "required": false,
-              "description": "URL for the object author.",
-              "type": "string"
-            },
-            "author_user_agent": {
-              "required": false,
-              "description": "User agent for the object author.",
-              "type": "string"
-            },
-            "content": {
-              "required": false,
-              "description": "The content for the object.",
-              "type": "object"
-            },
-            "date": {
-              "required": false,
-              "description": "The date the object was published, in the site's timezone.",
-              "type": "string"
-            },
-            "date_gmt": {
-              "required": false,
-              "description": "The date the object was published, as GMT.",
-              "type": "string"
-            },
-            "parent": {
-              "required": false,
-              "description": "The ID for the parent of the object.",
-              "type": "integer"
-            },
-            "post": {
-              "required": false,
-              "description": "The ID of the associated post object.",
-              "type": "integer"
-            },
-            "status": {
-              "required": false,
-              "description": "State of the object.",
-              "type": "string"
-            },
-            "meta": {
-              "required": false,
-              "description": "Meta fields.",
-              "type": "object"
-            }
-          }
-        },
-        {
-          "methods": [
-            "DELETE"
-          ],
-          "args": {
-            "id": {
-              "required": false,
-              "description": "Unique identifier for the object.",
-              "type": "integer"
-            },
-            "force": {
-              "required": false,
-              "default": false,
-              "description": "Whether to bypass trash and force deletion.",
-              "type": "boolean"
-            },
-            "password": {
-              "required": false,
-              "description": "The password for the post if it is password protected.",
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "/wp/v2/settings": {
-      "namespace": "wp/v2",
-      "methods": [
-        "GET",
-        "POST",
-        "PUT",
-        "PATCH"
-      ],
-      "endpoints": [
-        {
-          "methods": [
-            "GET"
-          ],
-          "args": []
-        },
-        {
-          "methods": [
-            "POST",
-            "PUT",
-            "PATCH"
-          ],
-          "args": {
-            "title": {
-              "required": false,
-              "description": "Site title.",
-              "type": "string"
-            },
-            "description": {
-              "required": false,
-              "description": "Site tagline.",
-              "type": "string"
-            },
-            "url": {
-              "required": false,
-              "description": "Site URL.",
-              "type": "string"
-            },
-            "email": {
-              "required": false,
-              "description": "This address is used for admin purposes, like new user notification.",
-              "type": "string"
-            },
-            "timezone": {
-              "required": false,
-              "description": "A city in the same timezone as you.",
-              "type": "string"
-            },
-            "date_format": {
-              "required": false,
-              "description": "A date format for all date strings.",
-              "type": "string"
-            },
-            "time_format": {
-              "required": false,
-              "description": "A time format for all time strings.",
-              "type": "string"
-            },
-            "start_of_week": {
-              "required": false,
-              "description": "A day number of the week that the week should start on.",
-              "type": "integer"
-            },
-            "language": {
-              "required": false,
-              "description": "WordPress locale code.",
-              "type": "string"
-            },
-            "use_smilies": {
-              "required": false,
-              "description": "Convert emoticons like :-) and :-P to graphics on display.",
-              "type": "boolean"
-            },
-            "default_category": {
-              "required": false,
-              "description": "Default post category.",
-              "type": "integer"
-            },
-            "default_post_format": {
-              "required": false,
-              "description": "Default post format.",
-              "type": "string"
-            },
-            "posts_per_page": {
-              "required": false,
-              "description": "Blog pages show at most.",
-              "type": "integer"
-            },
-            "default_ping_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Allow link notifications from other blogs (pingbacks and trackbacks) on new articles.",
-              "type": "string"
-            },
-            "default_comment_status": {
-              "required": false,
-              "enum": [
-                "open",
-                "closed"
-              ],
-              "description": "Allow people to post comments on new articles.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "_links": {
-        "self": "http://wearecube3.com/wp-json/wp/v2/settings"
-      }
-    }
-  },
-  "_links": {
-    "help": [
+    "categories": [
       {
-        "href": "http://v2.wp-api.org/"
+        "id": 210,
+        "name": "culture",
+        "slug": "culture"
+      },
+      {
+        "id": 178,
+        "name": "public relations",
+        "slug": "public-relations"
+      }
+    ]
+  },
+  {
+    "id": 7411,
+    "title": "Key stages of the brand development process",
+    "slug": "key-stages-of-the-brand-development-process",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/key-stages-of-the-brand-development-process.html",
+    "date": {
+      "posted": "2017-01-10T13:35:00",
+      "modified": "2016-12-13T13:35:47"
+    },
+    "author": {
+      "name": "Carla Gonzalez",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/carla/",
+      "avatar": "http://1.gravatar.com/avatar/ad01c39de42b2373116164c020aa49a1?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>Having a strong and recognisable brand is one of the most precious assets your company will ever have; it is the overall perception that your customers have of your business and how they experience it. Brand development isn’t the easiest of tasks and it doesn’t happen overnight; it requires a lot of time, energy and [&hellip;]</p>\n",
+    "content": "<p style=\"text-align: justify;\">Having a strong and recognisable brand is one of the most precious assets your company will ever have; it is the overall perception that your customers have of your business and how they experience it.</p>\n<p style=\"text-align: justify;\">Brand development isn’t the easiest of tasks and it doesn’t happen overnight; it requires a lot of time, energy and focus. However, if done correctly, you can rest assured that your brand will be the one to come to your customers’ minds as the service or product to go for when they have a need.</p>\n<p style=\"text-align: justify;\">At Cube3 we believe that, at its most simple and fundamental, brand strategy, is about <a href=\"http://wearecube3.com/insights/what-we-talk-about-when-we-talk-about-branding/\">defining what you stand for and making it stand out</a>. We have broken down this concept into seven key stages to help you start building a memorable brand and establish long-lasting relationship with your customers.</p>\n<h2 style=\"text-align: justify;\">Determine your buyer personas and their needs</h2>\n<p style=\"text-align: justify;\">The very first step in the brand development process is to identify who your buyer personas are and what is it that they are looking for.</p>\n<p style=\"text-align: justify;\">Buyer personas are fictional representations of your ideal customers, which help you understand both your clients and prospects better. By doing research not only on your personas’ demographics, but also on what they do for a living, their education, financial situation, information sources and most importantly, on their pain points, you will have a much better understanding of their needs and how you can meet them. This knowledge will also help you tailor your mission, messaging, product development and content, to suit them better.</p>\n<h2 style=\"text-align: justify;\">Define what you stand for</h2>\n<p style=\"text-align: justify;\">Once you know who your buyer personas are and what they are looking for, it’s time for you to take a long look at your business and get a clear picture of what its reason for existence is: its goals, mission, vision, and the value it provides. Does your business have a purpose apart from driving profit? Does it really meet the needs of your personas and help them solve their issues?</p>\n<p style=\"text-align: justify;\">And now that you are being introspective, take the time to also identify the essence of your brand. Because great brands are not simply just a promise of quality anymore; they make customers feel something every time they experience them.</p>\n<p style=\"text-align: justify;\">When defining your brand’s essence, think about your company’s heart, soul and spirit and try to relate this to the feelings you want your customers to feel whenever they buy your products or use your services.</p>\n<p style=\"text-align: justify;\">Having a clear mission, vision and essence will help you gain the trust of your customers and help them know what to expect every time they come to you.</p>\n<h2 style=\"text-align: justify;\">Know the competition</h2>\n<p style=\"text-align: justify;\">Knowing who else is out there, what they do well and what they do not so well can help you identify the challenges of your business and give you reasons to stand out.</p>\n<p style=\"text-align: justify;\">Take a look at what your competitors’ offers; their products and services, their pricing structures and their customers. Try to understand how they communicate, is their messaging and branding consistent? Is there something that you could do better?</p>\n<h2 style=\"text-align: justify;\">Get creative… literally!</h2>\n<p style=\"text-align: justify;\">For many, the most fun part of the brand development process is the designing and creation of all the elements used to communicate and symbolise their brand; these include name, logo, tagline, website, typography and other aesthetics.</p>\n<p style=\"text-align: justify;\">When developing these elements, it is important to keep in mind that they all need to reflect your business and what it stands for. Building a memorable and strong brand requires consistency throughout all these elements (which means setting guidelines) as they will become the visual identity and recall of your business and mission.</p>\n<h2 style=\"text-align: justify;\">Give your brand a bit of spark</h2>\n<p style=\"text-align: justify;\">Everyone has a personality; you have one, your neighbour has one, even that co-worker who sits behind you that you don’t really like has one, so there’s no reason why your brand should be the exception. Whether it’s super formal and mature or jubilant and a bit cheeky, giving your brand a suitable personality will help you define the way it speaks, acts, behaves and thinks.</p>\n<h2 style=\"text-align: justify;\">Position yourself</h2>\n<p style=\"text-align: justify;\">And to do this, you need a value proposition. In a nutshell, a value proposition is a one- or two-line statement that encapsulates everything we have talked about above (your buyer personas, brand personality and essence, your business’ mission, etc.) and explains your product or service’s unique value and how they solve your customer’s problems or improves their situation; helping you differentiate your brand and build trust with prospects.</p>\n<h2 style=\"text-align: justify;\">Stay true to your brand</h2>\n<p style=\"text-align: justify;\">Once you have created your brand, its personality and voice, make sure you are consistent and use it in every channel you use to communicate with your audience, in every piece of content you create. Keep in mind that you and your staff are your brand’s best advocate and therefore, you are the ones that have to live and breathe it. It has be something you can live up to.</p>\n<p style=\"text-align: justify;\">Not being consistent and changing your branding constantly will only lead to confusion between your customers and prospects; making it harder for your brand to be memorable and recognisable.</p>\n<p style=\"text-align: justify;\">Last but not least, make sure to integrate your brand into every aspect of the customer experience; from your website and social media channels to the way your phones are answered and the way your offices look. This will help you build a solid and authentic relationship with your customers, ensuring that they know exactly who you are and what they can expect from you.</p>\n",
+    "hero": {
+      "alt": "Key stages of the brand development process",
+      "caption": "",
+      "full": {
+        "filename": "Cube-Blog-imagery-041.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/key-stages-of-the-brand-development-process/Cube-Blog-imagery-041.jpg"
+      },
+      "thumb": {
+        "filename": "Cube-Blog-imagery-041-300x156.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/key-stages-of-the-brand-development-process/Cube-Blog-imagery-041-300x156.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 179,
+        "name": "branding",
+        "slug": "branding"
+      }
+    ]
+  },
+  {
+    "id": 7406,
+    "title": "Digital Marketing &#8211; What is it, really?",
+    "slug": "digital-marketing-what-is-it-really",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/digital-marketing-what-is-it-really.html",
+    "date": {
+      "posted": "2016-12-19T13:25:03",
+      "modified": "2016-12-13T13:38:28"
+    },
+    "author": {
+      "name": "Carla Gonzalez",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/carla/",
+      "avatar": "http://1.gravatar.com/avatar/ad01c39de42b2373116164c020aa49a1?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>The core purpose of marketing has always been to build brand awareness and engage with the right audience in the right place, at the right time. A few decades ago this used to be done in what we now call a “traditional” way; using methods such as print advertisements in magazines and newspapers, billboards, TV [&hellip;]</p>\n",
+    "content": "<p style=\"text-align: justify;\">The core purpose of marketing has always been to build brand awareness and engage with the right audience in the right place, at the right time.</p>\n<p style=\"text-align: justify;\">A few decades ago this used to be done in what we now call a “traditional” way; using methods such as print advertisements in magazines and newspapers, billboards, TV ads and radio spots.</p>\n<p style=\"text-align: justify;\">Although we still see this type of marketing around it’s effectiveness is questioned, mainly because the place where audiences can be found has changed. Back then people used to spend most of their free time watching TV, nowadays people spend an average of 4.1 hours a day online; making the cyberspace the place to be in order to attract and engage with audiences. Because of this many businesses have either incorporated or completely shifted to a new approach to promote their services and products… this approach is called digital marketing.</p>\n<h2 style=\"text-align: justify;\">What is Digital Marketing?</h2>\n<p style=\"text-align: justify;\">In a nutshell, digital marketing is a term used to encompass all of your marketing efforts done online; including any assets and tactics employed to deliver your strategy.</p>\n<p style=\"text-align: justify;\">There are many assets that can be used in a digital marketing strategy, the most common ones being:</p>\n<ul style=\"text-align: justify;\">\n<li>Having a website</li>\n<li>Blogging</li>\n<li>Publishing posts on social media</li>\n<li>Creating content such as infographics, guides, e-books, etc.</li>\n</ul>\n<p style=\"text-align: justify;\">When it comes to defining digital marketing tactics, they would basically be the way you implement your strategy in order to achieve your goal. For example, if your main goal is to increase organic traffic by ranking higher in search engine results then you should be doing SEO.</p>\n<p style=\"text-align: justify;\">Sometimes -if not most of the times- digital marketing tactics overlap each other and can be used together in order to make your strategy more robust. Using the above SEO example, let’s say that apart from ranking higher in search engines you also want to make your brand stand out and attract those people who have noticed you to your website; if that’s the case then apart from SEO you should also consider doing social media marketing and PPC.</p>\n<p style=\"text-align: justify;\">The assets and tactics that you use in your digital marketing strategy will vary depending on several factors such as what your end goal is and the resources you have available, but if done correctly, you will still reap results no matter how big or small your strategy is.</p>\n<p style=\"text-align: justify;\">As with any other type of project, being organised and having a plan is key when implementing a digital marketing strategy. This will help you not only know what you are going to be doing and when, but also <a href=\"http://wearecube3.com/insights/the-importance-of-an-integrated-marketing-strategy/\">keep your strategy integrated</a> and measure the success of your campaigns.</p>\n<p style=\"text-align: justify;\">A digital marketing strategy plan doesn’t have to be too complicated, the most important thing is that it outlines your goals, the assets and tactics you will be implementing, your target audience, time frames for completion, the budget allocated, etc.</p>\n<p style=\"text-align: justify;\">(<a href=\"https://www.flickr.com/photos/mkhmarketing/8468788107/\" target=\"_blank\">Photo</a> by mkhmarketing / <a href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\">CC BY 2.0</a>)</p>\n",
+    "hero": {
+      "alt": "Digital Marketing &#8211; What is it, really?",
+      "caption": "",
+      "full": {
+        "filename": "8468788107_bb6c21b0e4_k.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/digital-marketing-what-is-it-really/8468788107_bb6c21b0e4_k.jpg"
+      },
+      "thumb": {
+        "filename": "8468788107_bb6c21b0e4_k-300x108.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/digital-marketing-what-is-it-really/8468788107_bb6c21b0e4_k-300x108.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 188,
+        "name": "marketing",
+        "slug": "marketing"
+      }
+    ]
+  },
+  {
+    "id": 7403,
+    "title": "Why is branding important?",
+    "slug": "why-is-branding-important",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/why-is-branding-important.html",
+    "date": {
+      "posted": "2016-12-13T13:14:01",
+      "modified": "2016-12-13T13:38:04"
+    },
+    "author": {
+      "name": "Carla Gonzalez",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/carla/",
+      "avatar": "http://1.gravatar.com/avatar/ad01c39de42b2373116164c020aa49a1?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>In today’s over-saturated world, businesses rely more than ever on having a strong brand in order to attract new customers and build long-lasting relationships with them. But, what is branding, really? Branding is much more than sticking your super sleek logo on every wall of your office and document you produce. It involves every aspect [&hellip;]</p>\n",
+    "content": "<p style=\"text-align: justify;\">In today’s over-saturated world, businesses rely more than ever on having a strong brand in order to attract new customers and build long-lasting relationships with them.</p>\n<h3 style=\"text-align: justify;\">But, what is branding, really?</h3>\n<p style=\"text-align: justify;\">Branding is much more than sticking your super sleek logo on every wall of your office and document you produce. It involves every aspect related to your business and the way your customers perceive and experience it. It is the way you attract and engage with others and the way you position yourself.</p>\n<p style=\"text-align: justify;\">A good brand doesn’t just happen… it involves a well thought out and planned brand strategy which starts with defining who you are and what you stand for. Your brand is born at the very core of your business and it is transpired into every action you take; the way your staff act, how you show yourself online, the way you communicate with your customers, etc.</p>\n<h3 style=\"text-align: justify;\">Why is branding important?</h3>\n<p style=\"text-align: justify;\">If you have a strong brand then it is more than likely that you have a loyal customer base that apart from keeping coming back to you, they also refer others to your products or services.</p>\n<p style=\"text-align: justify;\">Branding is not only about making a promise of quality to customers anymore, it is about owning a piece of their hearts and minds. A clear and consistent brand provides value to your business that is beyond your physical assets. Take Apple for example; yes, their products are very innovative and efficient however, the reason why we are willing to pay any figure on their price tag is because we love Apple as a brand and we identify ourselves with what they represent.</p>\n<p style=\"text-align: justify;\">A strong brand also creates trust by connecting with your customers emotionally; helping them know what to expect from you and making them feel good for engaging with you and not someone else.</p>\n<p style=\"text-align: justify;\">Last but not least, your brand motivates and inspires your staff, giving them a reason to feel proud of being a part of your team and to work harder in order to achieve the goals you have set for them.</p>\n<p style=\"text-align: justify;\">As a brand strategy agency, at Cube3 we have three guiding principles that we follow in order to turn businesses into brands. To find out what they are, check out our blog post &#8220;<a href=\"http://wearecube3.com/insights/what-we-talk-about-when-we-talk-about-branding/\">What we talk about when we talk about branding</a>&#8220;.</p>\n",
+    "hero": {
+      "alt": "Why is branding important?",
+      "caption": "",
+      "full": {
+        "filename": "Insight.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/why-is-branding-important/Insight.jpg"
+      },
+      "thumb": {
+        "filename": "Insight-300x197.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/why-is-branding-important/Insight-300x197.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 179,
+        "name": "branding",
+        "slug": "branding"
+      }
+    ]
+  },
+  {
+    "id": 7371,
+    "title": "10 very honest reviews of The 3 Peaks Challenge",
+    "slug": "9-very-honest-reviews-of-the-3-peaks-challenge",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/9-very-honest-reviews-of-the-3-peaks-challenge.html",
+    "date": {
+      "posted": "2016-09-14T17:31:14",
+      "modified": "2016-09-15T15:18:05"
+    },
+    "author": {
+      "name": "Sarah",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/sarah/",
+      "avatar": "http://0.gravatar.com/avatar/98a644ad671f67ef301024a084f41ed4?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>The 3 Peaks Challenge is complete. Our legs are slowly starting to feel like our own again and we&#8217;re over the sugar highs and lows after a weekend fuelled by Haribo. So now the team have caught up on sleep and are making more sense,  here&#8217;s what they had to say about the challenge which [&hellip;]</p>\n",
+    "content": "<p>The 3 Peaks Challenge is complete. Our legs are slowly starting to feel like our own again and we&#8217;re over the sugar highs and lows after a weekend fuelled by Haribo.</p>\n<p>So now the team have caught up on sleep and are making more sense,  here&#8217;s what they had to say about the challenge which we admittedly expected to be &#8220;a walk in the park.&#8221;</p>\n<p>How wrong we were&#8230;</p>\n<p><b>Dan Nixon</b></p>\n<p>&#8220;One of the best experiences I have ever had. Totally exhausting (both physically and mentally) but far beyond my expectations of what it would be like. And I&#8217;ve formed a bond with the other people on the trip that goes far beyond &#8216;work colleagues&#8217;.&#8221;</p>\n<p><b>Sarah Purvis</b></p>\n<p>&#8220;The toughest thing I’ve ever done. But totally worth it.  A testament to the people at Cube3 that we didn’t kill each other after 0 hours sleep, and kept on laughing even at the bleakest of times.&#8221;</p>\n<p><b>Clair Morris</b></p>\n<p>&#8220;An unforgettable 24 hours. But really it was so much bigger than that. The months of training, planning and trying not to freak out brought us all closer together. And for us all to make it to the end of the challenge was a massive achievement. It just goes to show, with the right people behind you, you really can do anything.&#8221;</p>\n<p><span style=\"font-weight: 400;\">What’s next Cube3?</span></p>\n<p><b>Emma Levin</b></p>\n<p>&#8220;I completely underestimated how mentally and physically challenging the 3 peaks would be. It was a grueling 24 hours, that really tested us as a group, and individually. But just like I expected, the support we had for one another was truly special, and I couldn&#8217;t have asked for a better group to complete it with.&#8221;</p>\n<p><b>Alex Rennie</b></p>\n<p>&#8220;The highlight for me was Scafell Pike.We got great views of the Lake District from the summit. Then watching the sun set behind Wastwater on the descent was a special moment.We got to the bottom knowing we had done a lightening fast time and only had one mountain to complete – great feeling.&#8221;</p>\n<p><b>Mike Mellor </b></p>\n<p>&#8220;You spend most of the day waiting and waiting to climb a very large hill which you don’t really enjoy, 3 times. But strangely, it’s amazing fun and you feel really accomplished after it all.&#8221;</p>\n<p><b>Paul Irwin</b></p>\n<p>&#8220;Both the most challenging and rewarding thing I’ve ever done. And such an amazing group of people to do it with. So proud of the amount of money we raised for such a great charity.&#8221;</p>\n<p>**Burns his walking boots**</p>\n<p><b>Chris Jones</b></p>\n<p><span style=\"font-weight: 400;\">&#8220;One of the most gruelling yet enjoyable experiences. It’s been on my &#8216;to do&#8217; list for so long and I can’t thank the team enough for dragging me through it.&#8221;</span></p>\n<p><b>Dan Collins</b></p>\n<p>&#8220;The walking was the easy element. The challenge for me was navigating 11 of my work pals up to the 3 summits safely and at a pace which was fast enough to complete the challenge successfully, whilst still being enjoyable for all. All was well on the daylight walks but Snowdon was, shall we say, &#8216;interesting&#8217; in the dark!&#8221;</p>\n<p><strong>Adam Ashley</strong></p>\n<div>&#8220;The toughest thing I&#8217;ve ever done &#8211; both mentally and physically. It was an intense 24 hours that felt like a full week, but made bearable and way more rewarding by doing with THE best team there to push you all the way to the finish.</div>\n<div></div>\n<div>Life now doesn&#8217;t feel complete if I&#8217;m not on a mountain.&#8221;</div>\n<p><strong> Nick Morgan</strong></p>\n<p>&#8220;It was an incredible experience and one that you can&#8217;t help but feel had a lasting effect beyond the finish line. We&#8217;re definitely closer as a team and weirdly, although physically exhausted, feel mentally energised. High point for me was coming down out of the cloud covering the summit of Ben Nevis to see the sun shining across the mountains stretching out in every direction. Unforgettable.&#8221;</p>\n<p>&nbsp;</p>\n",
+    "hero": {
+      "alt": "10 very honest reviews of The 3 Peaks Challenge",
+      "caption": "",
+      "full": {
+        "filename": "Cube3_Peaks_Image_5.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/9-very-honest-reviews-of-the-3-peaks-challenge/Cube3_Peaks_Image_5.jpg"
+      },
+      "thumb": {
+        "filename": "Cube3_Peaks_Image_5-300x169.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/9-very-honest-reviews-of-the-3-peaks-challenge/Cube3_Peaks_Image_5-300x169.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 210,
+        "name": "culture",
+        "slug": "culture"
+      }
+    ]
+  },
+  {
+    "id": 7363,
+    "title": "Cube3 takes on the 3 Peaks Challenge. And wins.",
+    "slug": "cube3-takes-on-the-3-peaks-challenge-and-wins",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/cube3-takes-on-the-3-peaks-challenge-and-wins.html",
+    "date": {
+      "posted": "2016-09-14T12:52:00",
+      "modified": "2016-09-14T13:45:07"
+    },
+    "author": {
+      "name": "Sarah",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/sarah/",
+      "avatar": "http://0.gravatar.com/avatar/98a644ad671f67ef301024a084f41ed4?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>Last weekend the Cube3 team took on The 3 Peaks Challenge to raise money for The Booth Centre. That&#8217;s the 3 highest mountains in Scotland, England and Wales in 24 hours. Here&#8217;s what happened&#8230; Thanks to everyone who supported us. You helped us reach every summit.</p>\n",
+    "content": "<p>Last weekend the Cube3 team took on The 3 Peaks Challenge to raise money for <a href=\"http://www.boothcentre.org.uk/\">The Booth Centre</a>.</p>\n<p>That&#8217;s the 3 highest mountains in Scotland, England and Wales in 24 hours.</p>\n<p>Here&#8217;s what happened&#8230;</p>\n<p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/oVU1EmUJEoE\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<p>Thanks to everyone who supported us. You helped us reach every summit.</p>\n",
+    "hero": {
+      "alt": "Cube3 takes on the 3 Peaks Challenge. And wins.",
+      "caption": "",
+      "full": {
+        "filename": "Cube3_Peaks_Image_2.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/cube3-takes-on-the-3-peaks-challenge-and-wins/Cube3_Peaks_Image_2.jpg"
+      },
+      "thumb": {
+        "filename": "Cube3_Peaks_Image_2-300x169.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/cube3-takes-on-the-3-peaks-challenge-and-wins/Cube3_Peaks_Image_2-300x169.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 210,
+        "name": "culture",
+        "slug": "culture"
+      }
+    ]
+  },
+  {
+    "id": 7356,
+    "title": "Cube3’s website for Rohan is the “second best performing clothing website in the UK”.",
+    "slug": "cube3s-website-for-rohan-is-the-second-best-performing-clothing-website-in-the-uk",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/cube3s-website-for-rohan-is-the-second-best-performing-clothing-website-in-the-uk.html",
+    "date": {
+      "posted": "2016-09-07T15:06:41",
+      "modified": "2016-09-07T15:06:41"
+    },
+    "author": {
+      "name": "Sarah",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/sarah/",
+      "avatar": "http://0.gravatar.com/avatar/98a644ad671f67ef301024a084f41ed4?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>Our website for national outdoor retailer Rohan has hit the news this week for its strong website performance. The improvement meant that it almost beat Racing Green to the top spot, and knocked Agent Provocateur from second place in the table of the UK’s best performing websites in Q3, a massive move up the ranks [&hellip;]</p>\n",
+    "content": "<p>Our website for national outdoor retailer Rohan has hit the news this week for its strong website performance.</p>\n<p>The improvement meant that it almost beat Racing Green to the top spot, and knocked Agent Provocateur from second place in the table of the UK’s best performing websites in Q3, a massive move up the ranks from 21st position in Q2.</p>\n<p>The testing carried out by specialists for Drapers is based on quality, user experience, accessibility, performance and SEO capability.</p>\n<p>The improvement in performance follows a strategy and insight piece into the brand which informed the UX, design and front-end build. As a high percentage of Rohan customers visit the website on a tablet device, it was more important than ever that the journey and experience was seamless across all devices.</p>\n<p>Rohan has a rich heritage and history of adventure; it kitted out Austrian climber Peter Habeler for the first ascent of Mount Everest without bottled oxygen in 1978. But this wasn’t represented online, so we created a new Travel Stories area on the website, giving Rohan fans the opportunity to share stories and build a community based on a love of exploration.</p>\n<p><strong><span style=\"font-weight: 400;\">The brand has come a long way since it was founded in 1972 in the attic of a house in Skipton, North Yorkshire and with their ambitious plans to increase sales by another 30 percent in the next 5 years, we’re excited to be helping them on their journey. </span></strong></p>\n",
+    "hero": {
+      "alt": "Cube3’s website for Rohan is the “second best performing clothing website in the UK”.",
+      "caption": "",
+      "full": {
+        "filename": "rohan-cube3-blog-v2_720.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/cube3s-website-for-rohan-is-the-second-best-performing-clothing-website-in-the-uk/rohan-cube3-blog-v2_720.jpg"
+      },
+      "thumb": {
+        "filename": "rohan-cube3-blog-v2_720-300x169.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/cube3s-website-for-rohan-is-the-second-best-performing-clothing-website-in-the-uk/rohan-cube3-blog-v2_720-300x169.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 177,
+        "name": "web design",
+        "slug": "web-design"
+      }
+    ]
+  },
+  {
+    "id": 7347,
+    "title": "Instagram, the new Snapchat?",
+    "slug": "instagram-new-snapchat",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/instagram-new-snapchat.html",
+    "date": {
+      "posted": "2016-08-08T13:45:12",
+      "modified": "2016-08-08T14:03:27"
+    },
+    "author": {
+      "name": "Clair Morris",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/clair/",
+      "avatar": "http://2.gravatar.com/avatar/21f27b55261350e1e07f9c8f4b5548d9?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>For something that changes so frequently, the Internet really does not like change. Nothing causes more upset than when Facebook makes a minor tweak to its timeline layout. And that’s because social media sites, fully reliant on the content that we provide for them, are our spaces. And quite simply, we don’t like people messing [&hellip;]</p>\n",
+    "content": "<p>For something that changes so frequently, the Internet really does not like change.</p>\n<p>Nothing causes more upset than when Facebook makes a minor tweak to its timeline layout. And that’s because social media sites, fully reliant on the content that we provide for them, are </span><i><span style=\"font-weight: 400;\">our </span></i><span style=\"font-weight: 400;\">spaces.</p>\n<p>And quite simply, we don’t like people messing about with our stuff.</p>\n<p>But last week Instagram brought out the brand new Stories feature, and it has divided our office.</p>\n<p>So I have done some digging on both sides of the fence, to see what all the fuss is about.</p>\n<h3>Instagram Stories: The Pros</h3>\n<p>Instagram Stories mean we can be even closer to the lives of the people we follow.  Stories give us greater access to more (personal) moments from celebrities, magazines, brand and friends.</p>\n<p>And at least it gives you the option to view them, or not.</p>\n<p>Unlike Snapchat.</p>\n<p>Kevin Systrom, CEO of Instagram says:</p>\n<p><em>“If Instagram is built around highlights, we’re filling in the space in between &#8211; and becoming more about visual expression in general. We’re capturing all the world’s moments, not just the best ones”</em></p>\n<p>So it all sounds like a bit more than just another way to celeb-snoop. We now have a way to share more, better.</p>\n<h3>Instagram Stories: The Cons</h3>\n<p>It’s not all gravy though. Whilst we all love being constantly connected to everyone we’ve ever met, there’s no privacy with Instagram Stories. You are not able to send individual snaps to particular friends, which means being that bit more selective of the content you post to your story, as EVERYONE who follows you will see it.</p>\n<p>And that also means there is ALOT of content to deal with.</p>\n<p>Maybe even too much.</p>\n<p>With no way to filter out stories you don’t want to see, is Instagram becoming a place of too much sharing, and not enough caring?</p>\n<h3>The Verdict</h3>\n<p>Instagram is a platform where people generally only post their best ‘content’ and moments.</p>\n<p>And on Instagram, nobody wants to be ‘that guy’. Oversharing isn’t cool, this is about portraying the filtered version of our lives.</p>\n<p>But, through Stories, Instagram has solved the issue of oversharing. The feed will remain the place where people can post their ‘best’ content, and stories will encourage people to share more day-to-day unfiltered moments, to be a little more silly and creative.</p>\n<p>For brands, Stories will be a way to be able to share content without overwhelming people’s feeds. They will benefit from sharing exclusive content to their followers, behind-the-scenes at award shows, photoshoots, and interviews.</p>\n<p>Some brands have already jumped at the chance to collaborate with influencers, fans and brand ambassadors. From Instagram accounts like <a href=\"https://www.instagram.com/wearemcr/\">@WeAreMcr</a> giving photographers the chance to take over their feed for the day, to music magazines like Billboard allowing famous musicians to do takeovers whilst at Rio, Stories does seem to have brought new opportunities for creativity.</p>\n<p>It will be interesting  to see who remains loyal to Snapchat, and who will start using both platforms &#8211; what content will they decide to share on each? Will it be the same? Will brands share different content for each Story platform? How will it be differentiated? And how will that affect who uses each platform?</p>\n<p><strong>When it comes to the Internet we can be sure of one thing, it’s just going to keep on changing.</strong></p>\n",
+    "hero": {
+      "alt": "Instagram, the new Snapchat?",
+      "caption": "",
+      "full": {
+        "filename": "cube3_blog_instagramstories.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/instagram-new-snapchat/cube3_blog_instagramstories.jpg"
+      },
+      "thumb": {
+        "filename": "cube3_blog_instagramstories-300x156.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/instagram-new-snapchat/cube3_blog_instagramstories-300x156.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 181,
+        "name": "advertising",
+        "slug": "advertising"
+      },
+      {
+        "id": 184,
+        "name": "creative",
+        "slug": "creative"
+      },
+      {
+        "id": 188,
+        "name": "marketing",
+        "slug": "marketing"
+      },
+      {
+        "id": 183,
+        "name": "social media",
+        "slug": "social-media"
+      }
+    ]
+  },
+  {
+    "id": 7323,
+    "title": "3..2..1.. Brand Reactivate",
+    "slug": "3-2-1-brand-reactivate",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/3-2-1-brand-reactivate.html",
+    "date": {
+      "posted": "2016-07-25T15:44:52",
+      "modified": "2016-07-25T15:44:52"
+    },
+    "author": {
+      "name": "Clair Morris",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/clair/",
+      "avatar": "http://2.gravatar.com/avatar/21f27b55261350e1e07f9c8f4b5548d9?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>After waiting 13 long years, any 90s lover who wasn’t outside playing &#8216;Pokemon Go&#8217; last night tuned in for the return of &#8216;Robot Wars&#8217;. The show introduced a lot of new elements, effortlessly keeping up with the technological advances of today but it also didn’t change much at all by simply sticking to its core [&hellip;]</p>\n",
+    "content": "<p><span style=\"font-weight: 400;\">After waiting 13 long years, any 90s lover who wasn’t outside playing &#8216;Pokemon Go&#8217; last night tuned in for the return of &#8216;Robot Wars&#8217;.</span></p>\n<p><span style=\"font-weight: 400;\">The show introduced a lot of new elements, effortlessly keeping up with the technological advances of today but it also didn’t change much at all by simply sticking to its core value and message that robots are cool.</span></p>\n<p><span style=\"font-weight: 400;\">At a time where comebacks seem to be order of the day, it’s no easy feat rebranding a classic that can compete with the modern market, just think of some of the brands that have tried and failed… Gap famously spent a million pounds on a logo which they changed back after just one week and MasterCard, who introduced their new Pentagram designed rebrand this month, tried something similar in 2006 but quickly reverted back to the original iconic logo. Even Steps made a comeback in 2011 (yeah, I don’t remember it either).</span></p>\n<p><span style=\"font-weight: 400;\">With this trend becoming more and more popular, the brands who do crack the re-brand formula like &#8216;Robot Wars&#8217;, Old Spice deodorant and rapper Missy Elliott now all seem to be doing better than ever and with no end in sight, I’m looking forward to the return and re-brand of Blockbusters, Limewire and &#8216;Hey Arnold&#8217;.</span></p>\n<p><span style=\"font-weight: 400;\">For more insights, stay up-to-date on <a href=\"https://twitter.com/wearecube3?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor\">Twitter </a>or <a href=\"https://www.instagram.com/wearecube3/\">Instagram.</a></span></p>\n<p><span style=\"font-weight: 400;\">Cease!</span></p>\n<p>Image credit: BBC</p>\n",
+    "hero": {
+      "alt": "3..2..1.. Brand Reactivate",
+      "caption": "",
+      "full": {
+        "filename": "robot_wars_banner.png",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/3-2-1-brand-reactivate/robot_wars_banner.png"
+      },
+      "thumb": {
+        "filename": "robot_wars_banner-300x156.png",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/3-2-1-brand-reactivate/robot_wars_banner-300x156.png"
+      }
+    },
+    "categories": [
+      {
+        "id": 181,
+        "name": "advertising",
+        "slug": "advertising"
+      },
+      {
+        "id": 179,
+        "name": "branding",
+        "slug": "branding"
+      },
+      {
+        "id": 184,
+        "name": "creative",
+        "slug": "creative"
+      },
+      {
+        "id": 188,
+        "name": "marketing",
+        "slug": "marketing"
+      },
+      {
+        "id": 183,
+        "name": "social media",
+        "slug": "social-media"
+      }
+    ]
+  },
+  {
+    "id": 7307,
+    "title": "Creativity isn&#8217;t dead&#8230;",
+    "slug": "creativity-isnt-dead",
+    "url": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/pages/single-post/creativity-isnt-dead.html",
+    "date": {
+      "posted": "2016-07-25T09:30:12",
+      "modified": "2016-12-13T12:49:59"
+    },
+    "author": {
+      "name": "Alex Rennie",
+      "description": "",
+      "url": "http://wearecube3.com/insights/author/alex-rennie/",
+      "avatar": "http://2.gravatar.com/avatar/b16569bfe9179c4c4be51c1de7377cf2?s=96&d=mm&r=g"
+    },
+    "excerpt": "<p>Have you noticed that websites are all starting to look the same these days? A big hero image. Some over-sized type laid over the top. A call to action button. Then probably a row of three icons below that. In fact, the phenomenon is so prevalent that it has been gaining attention all-over the web [&hellip;]</p>\n",
+    "content": "<p>Have you noticed that websites are all starting to look the same these days? A big hero image. Some over-sized type laid over the top. A call to action button. Then probably a row of three icons below that.</p>\n<p>In fact, the phenomenon is so prevalent that it has been gaining attention <a title=\"Bootstrap\" href=\"http://adventurega.me/bootstrap/\" target=\"_blank\">all-over the web</a> for a <a href=\"http://www.novolume.co.uk/blog/all-websites-look-the-same/\" target=\"_blank\">number of years</a> now. It’s the death of creativity isn’t it? It’s the industry taking their clients for a ride, right? Well no, actually. And here’s why: if a user arrives at your site and already knows how to use it, that’s a <a href=\"https://boagworld.com/design/why-all-websites-should-look-the-same/\" target=\"_blank\">good thing</a>. It’s just a case of knowing where to break the mould, and where to use patterns that are familiar. UX design isn’t the place to experiment. That rad new icon you’ve just designed for “settings” is going to confuse all of your users because they’re looking for a cog. That innovative new menu you’ve been working on is going to be useless if users have to work out how to use it.</p>\n<p>That doesn’t mean creativity is dead though. In fact it’s vital when it comes to communicating brand values. And they should come across at every point of contact.</p>\n<p>A brand’s personality lives in its colour palette, in its typography, in its photography, in the way it talks. Google even has a set of <a href=\"https://material.google.com/motion/material-motion.html\">animation guidelines</a> to outline what type of movement is on-brand. And too right – that’s absolutely part of the experience and another example of how creativity is essential in telling a brand’s story.</p>\n<p>At Cube3, we build brands that are intuitive to interact with and we put creativity at the heart of our process. We find it’s a winning combination.</p>\n",
+    "hero": {
+      "alt": "Creativity isn&#8217;t dead&#8230;",
+      "caption": "",
+      "full": {
+        "filename": "production-line-4.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/creativity-isnt-dead/production-line-4.jpg"
+      },
+      "thumb": {
+        "filename": "production-line-4-300x156.jpg",
+        "location": "/Users/thom/projects/_sandbox/static-site-generator-wp-rest/public/images/single-post-images/creativity-isnt-dead/production-line-4-300x156.jpg"
+      }
+    },
+    "categories": [
+      {
+        "id": 179,
+        "name": "branding",
+        "slug": "branding"
+      },
+      {
+        "id": 184,
+        "name": "creative",
+        "slug": "creative"
+      },
+      {
+        "id": 177,
+        "name": "web design",
+        "slug": "web-design"
       }
     ]
   }
-}
+]

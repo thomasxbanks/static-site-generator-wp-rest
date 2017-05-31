@@ -27,10 +27,10 @@ server.listen(port, (err) => {
 		return console.log('something bad happened', err)
 	}
 
-	//getPostsAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
+	getPostsAPI('http://wearecube3.com/wp-json/wp/v2/posts?_embed')
 
 
-	getAPI('http://wearecube3.com/wp-json/')
+	//getAPI('http://wearecube3.com/wp-json/')
 
 	console.log(`server is listening on ${port}`)
 })

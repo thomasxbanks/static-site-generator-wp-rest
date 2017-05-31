@@ -57,11 +57,14 @@ _____
 _____
 
 ## What is there already out there and why don't we use that?
-Existing solution | Why we're not using it
+Existing solution | What is it? | Why we're not using it
 -----|-----
-[jeckyll](https://jekyllrb.com/) and other "[Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/)" | Build happens locally, no WordPress - uses markdown
-[Node on the server](http://cube-static.teamcube.co.uk/) | Potential issues with downtime, no caching - each 'static' page is generated at the time of request
-[httrack](http://www.httrack.com/html/fcguide.html) | Cube3 site took 2 hours to download, probably ages to FTP up too (`rsync`...?). Is a dumb tool, will just pull down everything - not just changes. Other than that, works perfectly. Potential for running the whole thing through a Gulp task to minify and optimise.
+[jekyll](https://jekyllrb.com/) and other "[Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/)" | Static site generation | Compilation happens locally, no WordPress - uses markdown
+[Node on the server](http://cube-static.teamcube.co.uk/) | Dynamically build a static page when the user hits that page | Potential issues with downtime, no caching - each 'static' page is generated at the time of request
+[httrack](http://www.httrack.com/html/fcguide.html) | Convert a website to static pages using bash commands | Cube3 site took 2 hours to download, probably ages to FTP up too (`rsync`...?). Is a dumb tool, will just pull down everything - not just changes. Other than that, works perfectly. Potential for running the whole thing through a Gulp task to minify and optimise.
+[WP Static HTML Output](https://en-gb.wordpress.org/plugins/static-html-output-plugin/) | WordPress plugin | Didn't work during testing
+[Simply Static](https://en-gb.wordpress.org/plugins/simply-static/) | WordPress plugin | Didn't work during testing
+[Really Static](https://en-gb.wordpress.org/plugins/really-static/) | WordPress plugin | Despite many articles lauding it as the best plugin for this use-case, it is incompatible with newer versions of WordPress (throws a fatal error)
 
 #### Footnote
 Apparently, Jekyll will build from a JSON feed - _"you could have a cron check for the last update on your WP site, then kick off Jekyll build on a CI server, with Jekyll consuming an API."_ Will investigate this.

@@ -24,6 +24,7 @@ _____
 1. The user will receive `.html` files on the front-end
 1. The static pages must be as up-to-date as the CMS _with as little delay as possible_
 
+[Visualise it]('/MakeStaticFiles.pdf')
 _____
 
 ## So what do we need to do?
@@ -58,8 +59,9 @@ _____
 
 ## What is there already out there and why don't we use that?
 Existing solution | What is it? | Why we're not using it
------|-----
-[jekyll](https://jekyllrb.com/) and other "[Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/)" | Static site generation | Compilation happens locally, no WordPress - uses markdown
+-----|-----|-----
+[jekyll](https://jekyllrb.com/) | Static site generation | Compilation happens locally, no WordPress - uses markdown
+Other [Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/) | Static site generation | Compilation happens locally, no WordPress
 [Node on the server](http://cube-static.teamcube.co.uk/) | Dynamically build a static page when the user hits that page | Potential issues with downtime, no caching - each 'static' page is generated at the time of request
 [httrack](http://www.httrack.com/html/fcguide.html) | Convert a website to static pages using bash commands | Cube3 site took 2 hours to download, probably ages to FTP up too (`rsync`...?). Is a dumb tool, will just pull down everything - not just changes. Other than that, works perfectly. Potential for running the whole thing through a Gulp task to minify and optimise.
 [WP Static HTML Output](https://en-gb.wordpress.org/plugins/static-html-output-plugin/) | WordPress plugin | Didn't work during testing
@@ -67,7 +69,10 @@ Existing solution | What is it? | Why we're not using it
 [Really Static](https://en-gb.wordpress.org/plugins/really-static/) | WordPress plugin | Despite many articles lauding it as the best plugin for this use-case, it is incompatible with newer versions of WordPress (throws a fatal error)
 
 #### Footnote
-Apparently, Jekyll will build from a JSON feed - _"you could have a cron check for the last update on your WP site, then kick off Jekyll build on a CI server, with Jekyll consuming an API."_ Will investigate this.
+Apparently, Jekyll **will** build from a JSON feed - _"you could have a cron check for the last update on your WP site, then kick off Jekyll build on a CI server, with Jekyll consuming an API."_
+
+According to [the docs](https://jekyllrb.com/docs/datafiles/), Jekyll can take input from a JSON file and content is available using `site.data` in the template. This would need Node Fileserver to write the REST API response to a static JSON file for Jekyll to read. It's not the use-case this feature was primarily designed for though.
+
 _____
 
 ## Issues

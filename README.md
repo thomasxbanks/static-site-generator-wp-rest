@@ -62,7 +62,7 @@ _____
 Existing solution | What is it? | Why we're not using it
 -----|-----|-----
 [jekyll](https://jekyllrb.com/) | Static site generation | Compilation happens locally, no WordPress - uses markdown.
-Other [Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/) | Static site generation | Compilation happens locally, no WordPress
+Other [Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/) | Static site generation | Compilation happens locally, no WordPress. A lot of these are aimed at developers or tech-savvy people - it's not impossible but there's a learning curve that you probably don't want to pass on to clients and other content managers.
 [Node on the server](http://cube-static.teamcube.co.uk/) | Dynamically build a static page when the user hits that page | Potential issues with downtime, no caching - each 'static' page is generated at the time of request
 [httrack](http://www.httrack.com/html/fcguide.html) | Convert a website to static pages using bash commands | Cube3 site took 2 hours to download, probably ages to FTP up too (`rsync`...?). Is a dumb tool, will just pull down everything - not just changes. Other than that, works perfectly. Potential for running the whole thing through a Gulp task to minify and optimise.
 [WP Static HTML Output](https://en-gb.wordpress.org/plugins/static-html-output-plugin/) | WordPress plugin | Didn't work during testing

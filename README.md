@@ -24,7 +24,7 @@ _____
 1. The user will receive `.html` files on the front-end
 1. The static pages must be as up-to-date as the CMS _with as little delay as possible_
 
-[Visualise it]('/MakeStaticFiles.pdf')
+[Visualise it](MakeStaticFiles.pdf)
 _____
 
 ## So what do we need to do?

@@ -24,7 +24,6 @@ _____
 1. The user will receive `.html` files on the front-end
 1. The static pages must be as up-to-date as the CMS _with as little delay as possible_
 
-[Visualise it](MakeStaticFiles.pdf)
 _____
 
 ## So what do we need to do?
@@ -37,6 +36,8 @@ _____
 1. **Only** do this to a page that has changed
 1. **Always** do this when a change is made
 1. Manual intervention **is** possible if it is *simple enough* to be done by non-technical staff
+
+[Flow diagram](MakeStaticFiles.pdf)
 
 ### Trickier stuff
 1. `POST` form submissions back to WordPress
@@ -60,7 +61,7 @@ _____
 ## What is there already out there and why don't we use that?
 Existing solution | What is it? | Why we're not using it
 -----|-----|-----
-[jekyll](https://jekyllrb.com/) | Static site generation | Compilation happens locally, no WordPress - uses markdown
+[jekyll](https://jekyllrb.com/) | Static site generation | Compilation happens locally, no WordPress - uses markdown.
 Other [Static Site Generators](https://www.netlify.com/blog/2016/05/02/top-ten-static-website-generators/) | Static site generation | Compilation happens locally, no WordPress
 [Node on the server](http://cube-static.teamcube.co.uk/) | Dynamically build a static page when the user hits that page | Potential issues with downtime, no caching - each 'static' page is generated at the time of request
 [httrack](http://www.httrack.com/html/fcguide.html) | Convert a website to static pages using bash commands | Cube3 site took 2 hours to download, probably ages to FTP up too (`rsync`...?). Is a dumb tool, will just pull down everything - not just changes. Other than that, works perfectly. Potential for running the whole thing through a Gulp task to minify and optimise.
@@ -73,12 +74,15 @@ Apparently, Jekyll **will** build from a JSON feed - _"you could have a cron che
 
 According to [the docs](https://jekyllrb.com/docs/datafiles/), Jekyll can take input from a JSON file and content is available using `site.data` in the template. This would need Node Fileserver to write the REST API response to a static JSON file for Jekyll to read. It's not the use-case this feature was primarily designed for though.
 
+Jekyll also offers an "[import from WordPress](http://import.jekyllrb.com/docs/wordpress/)" option but this doesn't import everything. It seems like a quick way to move over to using Jekyll but does not appear valid for this research.
+>This importer only converts your posts and creates YAML front-matter. It does not import any layouts, styling, or external files (images, CSS, etc.).
+
 _____
 
 ## Issues
 Things I have noticed during the duration of this experiment that are difficult or could prevent the viability.
 1. The initial set-up can be tricky; the API return varies from site-to-site, resulting in a potentially large chunk of time sanitising the return data.
 1. Retro-fitting this to existing projects is harder than doing it from scratch.
-1. Not found a viable solution for only updating what has changed yet.
-1. Menus (`wp-admin/appearance/menus`), unless hard-coded or dynamically-generated at build time, are hard to get hold of without editing PHP, modifying core WP, or installing a [plugin](https://wordpress.stackexchange.com/questions/209381/get-wp-navigation-menu-from-rest-api-v2).
-1. Requires rebuilding the entire front-end - no reuse of existing templates (not a problem for a new build but lots of work for a conversion - _**Update:**_ [Liquid](https://shopify.github.io/liquid/) is Shopify's templating language and is similar to twig meaning we _may_ be able to leverage existing templates.)
+1. Not found a viable solution for updating only what has changed yet.
+1. Menus (`wp-admin/appearance/menus`), unless hard-coded, are hard to get hold of without editing PHP, modifying core WP, or installing a [plugin](https://wordpress.stackexchange.com/questions/209381/get-wp-navigation-menu-from-rest-api-v2).
+1. Every solution using the REST API I have found so far requires rebuilding the entire front-end - no reuse of existing templates (not a problem for a new build but lots of work for a conversion - _**Update:**_ [Liquid](https://shopify.github.io/liquid/) is Shopify's templating language and is similar to twig meaning we _may_ be able to leverage existing templates.)

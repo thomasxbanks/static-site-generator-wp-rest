@@ -24,6 +24,8 @@ _____
 1. The user will receive `.html` files on the front-end
 1. The static pages must be as up-to-date as the CMS _with as little delay as possible_
 
+
+- [Flow diagram](MakeStaticFiles.pdf) of the process
 _____
 
 ## So what do we need to do?
@@ -36,8 +38,6 @@ _____
 1. **Only** do this to a page that has changed
 1. **Always** do this when a change is made
 1. Manual intervention **is** possible if it is *simple enough* to be done by non-technical staff
-
-[Flow diagram](MakeStaticFiles.pdf)
 
 ### Trickier stuff
 1. `POST` form submissions back to WordPress

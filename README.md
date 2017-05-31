@@ -77,8 +77,7 @@ _____
 
 ## Issues
 Things I have noticed during the duration of this experiment that are difficult or could prevent the viability.
-1. The initial set-up can be tricky;
-  - the API return varies from site-to-site, resulting in a potentially large chunk of time sanitising the return data.
+1. The initial set-up can be tricky; the API return varies from site-to-site, resulting in a potentially large chunk of time sanitising the return data.
 1. Retro-fitting this to existing projects is harder than doing it from scratch.
 1. Not found a viable solution for only updating what has changed yet.
 1. Menus (`wp-admin/appearance/menus`), unless hard-coded or dynamically-generated at build time, are hard to get hold of without editing PHP, modifying core WP, or installing a [plugin](https://wordpress.stackexchange.com/questions/209381/get-wp-navigation-menu-from-rest-api-v2).
